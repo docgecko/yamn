@@ -14,8 +14,23 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
+  var nodemonIgnoredFiles = [
+    'README.md',
+    'Gruntfile.js',
+    '/.git/',
+    '/node_modules/',
+    '/app/',
+    '/dist/',
+    '/test/',
+    '/temp/',
+    '/.tmp',
+    '/.sass-cache',
+    '*.txt',
+    '*.jade',
+  ];
+
   try {
-    yeomanConfig.app = require('./component.json').appPath || yeomanConfig.app;
+    yeomanConfig.app = require('./bower.json').appPath || yeomanConfig.app;
   } catch (e) {}
 
   grunt.initConfig({
@@ -40,6 +55,14 @@ module.exports = function (grunt) {
       stylus: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.styl'],
         tasks: ['stylus']
+      },
+      css: {
+        files: ['{.tmp,<%= yeoman.app %>}/styles/**/*.css'],
+        tasks: ['css']
+      },
+      images: {
+        files: ['<%= yeoman.app %>/images/**/*.{png,jpg,jpeg,webp}'],
+        tasks: ['images']
       },
       livereload: {
         files: [
@@ -201,6 +224,16 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.app %>/images',
           src: '{,*/}*.{png,jpg,jpeg}',
+          dest: '<%= yeoman.dist %>/images'
+        }]
+      }
+    },
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/images',
+          src: '{,*/}*.svg',
           dest: '<%= yeoman.dist %>/images'
         }]
       }

@@ -30,46 +30,56 @@ and respond to installation instructions (terminal command):
 
 1.6. add directory (terminal command):
 
-    mkdir public/webfonts
+    mkdir app/styles/fonts
 
-1.7. update add.js:
+1.7. delete public directory:
 
-- remove refs to "users" - line 8 & 34
+    rm -rf public
 
-1.8. delete file:
+1.8. update add.js:
 
-- routes/user.js
+    - remove refs to "users" - line 8 & 34
 
-1.9. update .editorconfig
+1.9. delete file:
 
-- indent_style = tab
-- indent_size = 4
+    - routes/user.js
 
-1.10. bower.json (component.json is depreciated):
+1.10. update .editorconfig
 
-- rename "component.json" to "bower.json"
-- delete "component.json"
+    - indent_style = tab
+    - indent_size = 4
 
-1.11. change following line in app.js, from:
+1.11. bower.json (component.json is depreciated):
 
-- app.use(express.static(path.join(__dirname, 'public')));
+    - rename "component.json" to "bower.json"
+    - delete "component.json"
+
+1.12. change following line in app.js, from:
+
+    - app.use(express.static(path.join(__dirname, 'public')));
+
 to:
-- app.use(express.static(path.join(__dirname, 'app')));
+
+    - app.use(express.static(path.join(__dirname, 'app')));
+
 and add following line:
-- app.use(express.static(path.join(__dirname, '.tmp')));
 
-1.11. delete the following file:
+    - app.use(express.static(path.join(__dirname, '.tmp')));
 
-- app/index.html
+1.13. delete the following file:
+
+    - app/index.html
+
 and replace with the following files (and content as per the default app):
-- views/index.jade
-- views/layout.jade
 
-1.12. add the following to app.js (line 18):
+    - views/index.jade
+    - views/layout.jade
 
-- app.locals.pretty = true;
+1.14. add the following to app.js (line 18):
 
-1.13. update "routes/index.js" to:
+    - app.locals.pretty = true;
+
+1.15. update "routes/index.js" to:
 
     /*
      * GET home page.
@@ -84,7 +94,7 @@ and replace with the following files (and content as per the default app):
         });
     };
 
-1.14. update "app/scripts/app.js" to:
+1.16. update "app/scripts/app.js" to:
 
     'use strict';
 
@@ -100,7 +110,7 @@ and replace with the following files (and content as per the default app):
           });
       });
 
-1.15. update "app/scripts/controllers/main.js" to:
+1.17. update "app/scripts/controllers/main.js" to:
 
     'use strict';
 
@@ -113,7 +123,7 @@ and replace with the following files (and content as per the default app):
         ];
       });
 
-1.16. update "views/layout.jade" to:
+1.18. update "views/layout.jade" to:
 
     doctype 5
     //if lt IE 7
@@ -141,7 +151,7 @@ and replace with the following files (and content as per the default app):
         body(ng-app='#{ngApp}')
             block content
 
-1.17. update "views/index.jade" to:
+1.19. update "views/index.jade" to:
 
     extends layout
 
@@ -347,12 +357,12 @@ with:
     ]);
 
 
-## Part 5: Zurb Foundation 4 Integration
+## Part 4: Zurb Foundation 4 Integration
 
-5.1. install "components-foundation":
+4.1. install "components-foundation":
 - bower install components-foundation --save
 
-5.2. add the following to Gruntfile.js:
+4.2. add the following to Gruntfile.js:
 
 	copy: {
         css: {
@@ -365,23 +375,23 @@ with:
 	}
 
 
-## Part 6: Index File Update
+## Part 5: Index File Update
 
-6.1. remove the following link from index.jade:
+5.1. remove the following link from index.jade:
 
     link(rel='stylesheet', href='styles/main.css')
 
-6.2. add links to the HEAD of index.jade:
+5.2. add links to the HEAD of index.jade:
 
     link(rel='stylesheet', href='styles/normalize.css')
     link(rel='stylesheet', href='styles/foundation.css')
     link(rel='stylesheet', href='styles/application.css')
 
-6.3. add link to head:
+5.3. add link to head:
 
     link(type='text/plain', rel='author', href='http://localhost:3000/humans.txt')
 
-6.4. add humans.txt file to "app/" directory, with following content:
+5.4. add humans.txt file to "app/" directory, with following content:
 
     /* TEAM */
     Your title: Daren Warburton
@@ -398,5 +408,37 @@ with:
       Standards: HTML5, CSS3
       Components: Modernizer, Karma,
       Software: WebStorm, Git, Terminal, iAwriter, PivotalTracker, Trello
+
+
+## Part 6: Gruntfile.js updates
+
+6.1. add following code after imagemin:
+
+    svgmin: {
+        dist: {
+            files: [{
+                expand: true,
+                cwd: '<%= yeoman.app %>/images',
+                src: '{,*/}*.svg',
+                dest: '<%= yeoman.dist %>/images'
+            }]
+        }
+    },
+
+
+
+
+## Part 7: Grunt Nodemon Server
+
+7.1. install nodemon and node-inspector globally (terminal command):
+
+    npm install -g node-inspector nodemon
+
+7.2. install grunt-nodemon (terminal command):
+
+    npm install grunt-nodemon --save-dev
+
+7.3.
+
 
 ## Part 7: I18n & I10n Integration
