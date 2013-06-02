@@ -1,0 +1,15 @@
+/* TEAM */
+Your title: Daren Warburton
+Site: daren.sdw@gmail.com
+Twitter: drwarbie
+Location: Lisboa, Portugal
+
+/* THANKS */
+
+
+
+/* SITE */
+  Last update: 2013/05/29
+  Standards: HTML5, CSS3
+  Components: Modernizer, Karma,
+  Software: WebStorm, Git, Terminal, iAwriter, PivotalTracker, Trello
