@@ -38,7 +38,7 @@ module.exports = function (grunt) {
         tasks: ['jade']
       },
       stylus: {
-        files: ['public/stylesheets/{,*/}*.styl'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.styl'],
         tasks: ['stylus']
       },
       livereload: {
@@ -167,7 +167,7 @@ module.exports = function (grunt) {
     stylus: {
       compile : {
         files : {
-          'app/styles/application.css' : 'public/stylesheets/*.styl'
+          '.tmp/styles/application.css' : 'app/styles/*.styl'
         }
       }
     },
@@ -276,8 +276,8 @@ module.exports = function (grunt) {
     copy: {
       css: {
         files: {
-          'app/styles/normalize.css': 'app/components/normalize-css/normalize.css',
-          'app/styles/foundation.css': 'app/components/components-foundation/css/foundation.css'
+          '.tmp/styles/normalize.css': 'app/components/normalize-css/normalize.css',
+          '.tmp/styles/foundation.css': 'app/components/components-foundation/css/foundation.css'
         }
       },
       dist: {
