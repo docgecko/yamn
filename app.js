@@ -12,7 +12,7 @@ var express = require('express')
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 9000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.locals.pretty = true;
@@ -28,8 +28,14 @@ app.use(stylus.middleware({
     // It will add /stylesheets to this path.
   , dest: __dirname + '/public'
 }));
-app.use(express.static(path.join(__dirname, 'app')));
-app.use(express.static(path.join(__dirname, '.tmp')));
+
+// host dev files if in dev mode
+if (app.get('env') === 'development') {
+    app.use(express.static(path.join(__dirname, 'app')));
+    app.use(express.static(path.join(__dirname, '.tmp')));
+} else {
+    app.use(express.static(path.join(__dirname, 'dist')));
+}
 
 // development only
 if ('development' == app.get('env')) {

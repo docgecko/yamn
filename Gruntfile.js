@@ -14,7 +14,7 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
-  var nodemonIgnoredFiles = [
+/*  var nodemonIgnoredFiles = [
     'README.md',
     'Gruntfile.js',
     '/.git/',
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
     '/.sass-cache',
     '*.txt',
     '*.jade',
-  ];
+  ];*/
 
   try {
     yeomanConfig.app = require('./bower.json').appPath || yeomanConfig.app;
@@ -36,6 +36,15 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: yeomanConfig,
     watch: {
+      jade: {
+//         files: ['<%= yeoman.app %>/{,*/}*.jade'],
+        files: ['views/{,*/}*.jade'],
+        tasks: ['jade']
+      },
+      stylus: {
+        files: ['<%= yeoman.app %>/styles/{,*/}*.styl'],
+        tasks: ['stylus']
+      },
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
         tasks: ['coffee:dist']
@@ -48,16 +57,8 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass']
       },
-      jade: {
-        files: ['<%= yeoman.app %>/{,*/}*.jade'],
-        tasks: ['jade']
-      },
-      stylus: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.styl'],
-        tasks: ['stylus']
-      },
       css: {
-        files: ['{.tmp,<%= yeoman.app %>}/styles/**/*.css'],
+        files: ['{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css'],
         tasks: ['css']
       },
       images: {
@@ -127,7 +128,8 @@ module.exports = function (grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= yeoman.app %>/scripts/{,*/}*.js'
+        '<%= yeoman.app %>/scripts/{,*/}*.js',
+        // 'test/spec/{,*/}*.js'
       ]
     },
     karma: {
@@ -182,7 +184,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.app %>',
           dest: '.tmp',
-          src: '{,*/}*.jade',
+          src: '{,*//*}*.jade',
           ext: '.html'
         }]
       }
@@ -190,7 +192,7 @@ module.exports = function (grunt) {
     stylus: {
       compile : {
         files : {
-          '.tmp/styles/application.css' : 'app/styles/*.styl'
+          '.tmp/styles/style.css' : '<%= yeoman.app %>/styles/*.styl'
         }
       }
     },
@@ -205,8 +207,8 @@ module.exports = function (grunt) {
       }
     },
     useminPrepare: {
-      html: '.tmp/index.html',
-      // html: '<%= yeoman.app %>/index.html',
+      // html: '.tmp/index.html',
+      html: '<%= yeoman.app %>/index.html',
       options: {
         dest: '<%= yeoman.dist %>'
       }
@@ -242,6 +244,9 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= yeoman.dist %>/styles/main.css': [
+            // list any css files you'd like to combine/minify into main.css here
+            'app/components/normalize-css/normalize.css',
+            'app/components/components-foundation/css/foundation.css',
             '.tmp/styles/{,*/}*.css',
             '<%= yeoman.app %>/styles/{,*/}*.css'
           ]
@@ -309,8 +314,8 @@ module.exports = function (grunt) {
     copy: {
       css: {
         files: {
-          '.tmp/styles/normalize.css': 'app/components/normalize-css/normalize.css',
-          '.tmp/styles/foundation.css': 'app/components/components-foundation/css/foundation.css'
+          // '.tmp/styles/normalize.css': 'app/components/normalize-css/normalize.css',
+          // '.tmp/styles/foundation.css': 'app/components/components-foundation/css/foundation.css'
         }
       },
       dist: {
@@ -328,6 +333,57 @@ module.exports = function (grunt) {
           ]
         }]
       }
+/*    },
+    concurrent: {
+      nodemon: {
+        options: {
+          logConcurrentOutput: true
+        },
+        tasks: [
+          'nodemon:nodeInspector',
+          'nodemon:dev',
+          'watch'
+        ]
+      },
+      server: [
+        'coffee:dist',
+        'compass:server'
+      ],
+      test: [
+        'coffee',
+        'compass'
+      ],
+      dist: [
+        'coffee',
+        'compass:dist',
+        'imagemin',
+        'svgmin',
+        'htmlmin'
+      ]
+    },
+    nodemon: {
+      dev: {
+        options: {
+          file: 'app.js',
+          args: ['development'],
+          watchedExtensions: [
+            'js',
+            'coffee'
+          ],
+          // nodemon watches the current directory recursively by default
+          // watchedFolders: ['.'],
+          debug: true,
+          delayTime: 1,
+          ignoredFiles: nodemonIgnoredFiles
+        }
+      },
+      nodeInspector: {
+        options: {
+          file: 'node-inspector.js',
+          exec: 'node-inspector',
+          ignoredFiles: nodemonIgnoredFiles
+        }
+      }*/
     }
   });
 
@@ -335,6 +391,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('server', [
     'clean:server',
+/*    'concurrent:server',
+    'concurrent:nodemon',*/
     'coffee:dist',
     'compass:server',
     'jade',
@@ -347,6 +405,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
+/*    'concurrent:test',*/
     'coffee',
     'compass',
     'connect:test',
@@ -355,6 +414,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+/*    'concurrent:dist',*/
     'jshint',
     'test',
     'coffee',

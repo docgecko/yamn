@@ -426,19 +426,17 @@ with:
     },
 
 
-
-
 ## Part 7: Grunt Nodemon Server
 
 7.1. install nodemon and node-inspector globally (terminal command):
 
     npm install -g node-inspector nodemon
 
-7.2. install grunt-nodemon (terminal command):
+7.2. install grunt-nodemon and grunt-concurrent (terminal command):
 
-    npm install grunt-nodemon --save-dev
+    npm install grunt-nodemon grunt-concurrent --save-dev
 
-7.3.
+7.3. add the following code to Gruntfile.js:
 
 
 ## Part 7: I18n & I10n Integration

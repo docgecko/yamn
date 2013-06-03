@@ -11,15 +11,18 @@ html(class="no-js")
 	head
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-		title= title
+		block title
+			title= title
 		meta(name='description', content='')
 		meta(name='viewport', content='width=device-width')
 		link(type='text/plain', rel='author', href='http://localhost:9000/humans.txt')
 		// Place favicon.ico and apple-touch-icon.png in the root directory
-		// build:css styles/main.css
-		link(rel='stylesheet', href='styles/normalize.css')
-		link(rel='stylesheet', href='styles/foundation.css')
-		link(rel='stylesheet', href='styles/application.css')
-		// endbuild
+		block css
+			// build:css styles/main.css
+			// link(rel='stylesheet', href='styles/normalize.css')
+			// link(rel='stylesheet', href='styles/foundation.css')
+			// link(rel='stylesheet', href='styles/application.css')
+			link(rel='stylesheet', href='styles/main.css')
+			// endbuild
 	body(ng-app='#{ngApp}')
 		block content
