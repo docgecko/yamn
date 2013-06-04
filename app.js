@@ -5,7 +5,6 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , stylus = require('stylus')
   , http = require('http')
   , path = require('path');
 
@@ -23,11 +22,6 @@ app.use(express.methodOverride());
 app.use(express.cookieParser('your secret here'));
 app.use(express.session());
 app.use(app.router);
-app.use(stylus.middleware({
-    src: __dirname + '/views'
-    // It will add /stylesheets to this path.
-  , dest: __dirname + '/public'
-}));
 
 // host dev files if in dev mode
 if (app.get('env') === 'development') {
