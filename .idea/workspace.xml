@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcbcb548-cac2-429f-9b4f-5e68da264a24" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/styles/_layout.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/styles/_looks.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/styles/_mixins.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/styles/_typography.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/styles/app.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/styles/style.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/styles/style.styl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/styles/application.styl" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.jade" afterPath="$PROJECT_DIR$/app/views/main.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="default.iws" />
@@ -36,7 +25,7 @@
     <file path="/index.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370179734896" ignored="false" />
     <file path="/Dummy.txt" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370346047623" ignored="false" />
     <file path="/package.json" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369994495599" ignored="false" />
-    <file path="/README.md" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370245695672" ignored="false" />
+    <file path="/README.md" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370357681753" ignored="false" />
     <file path="$PROJECT_DIR$/../../my-project/views/index.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370009031203" ignored="false" />
     <file path="$PROJECT_DIR$/../default v3/app/index.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370170351665" ignored="false" />
     <file path="$PROJECT_DIR$/../default v3/app.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370170402609" ignored="false" />
@@ -48,13 +37,12 @@
     <file path="$PROJECT_DIR$/../default v4/app/index.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370175404442" ignored="false" />
     <file path="$PROJECT_DIR$/../default v4/views/layout.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370175563021" ignored="false" />
     <file path="$PROJECT_DIR$/../default v4/app/scripts/controllers/main.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370175589445" ignored="false" />
-    <file path="/style.styl" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370339572245" ignored="false" />
+    <file path="/style.styl" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370357955706" ignored="false" />
     <file path="/app.scss" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370247783330" ignored="false" />
     <file path="/main.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370346372769" ignored="false" />
     <file path="/application.scss" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370338794511" ignored="false" />
     <file path="/foo.styl" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370339248748" ignored="false" />
-    <file path="/application.styl" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370346924821" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/components/angular/angular.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370343847581" ignored="false" />
+    <file path="/application.styl" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370357472638" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/angular/angular.min.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370344507932" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,37 +63,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="21" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.styl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/styles/style.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="16" selection-start="58" selection-end="58" vertical-scroll-proportion="0.14383562">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="5" selection-start="1092" selection-end="1104" vertical-scroll-proportion="-22.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="327" column="0" selection-start="9878" selection-end="9878" vertical-scroll-proportion="-1.1966528">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.styl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/styles/application.styl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="17" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="29" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
+            <state line="302" column="32" selection-start="0" selection-end="12257" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -130,7 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/app/styles/app.scss" />
         <option value="$PROJECT_DIR$/app/views/index.jade" />
         <option value="$PROJECT_DIR$/app/views/templates/main.jade" />
@@ -139,13 +126,14 @@
         <option value="$PROJECT_DIR$/app/styles/application.scss" />
         <option value="$PROJECT_DIR$/views/stylesheets/foo.styl" />
         <option value="$PROJECT_DIR$/.tmp/styles/application.css" />
-        <option value="$PROJECT_DIR$/app/styles/style.styl" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/views/index.jade" />
-        <option value="$PROJECT_DIR$/app/styles/application.styl" />
         <option value="$PROJECT_DIR$/app/views/main.jade" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/app/styles/application.styl" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/styles/style.styl" />
       </list>
     </option>
   </component>
@@ -305,10 +293,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="options.lastSelected" value="preferences.externalTools" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../default v5" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
@@ -399,10 +392,11 @@
     <frame x="0" y="22" width="872" height="878" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982357" sideWeight="0.670398" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2909305" sideWeight="0.67150396" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292978" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29903147" sideWeight="0.67150396" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -478,18 +472,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.nodemonignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="426" column="0" selection-start="10110" selection-end="10110" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="53" selection-start="775" selection-end="775" vertical-scroll-proportion="0.44573644">
@@ -549,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="5" selection-start="1092" selection-end="1098" vertical-scroll-proportion="0.7223796">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
@@ -570,16 +545,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/application.styl">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+        <state line="36" column="5" selection-start="1092" selection-end="1104" vertical-scroll-proportion="-22.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="327" column="0" selection-start="9878" selection-end="9878" vertical-scroll-proportion="-1.1966528">
+        <state line="302" column="32" selection-start="0" selection-end="12257" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="21" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/_typography.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="16" selection-start="58" selection-end="58" vertical-scroll-proportion="0.14383562">
           <folding />
         </state>
       </provider>
