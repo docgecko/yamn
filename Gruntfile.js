@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 
     // configurable paths
     var yeomanConfig = {
-        app: 'app',
+        app: 'client',
         dist: 'dist'
     };
 
@@ -41,7 +41,7 @@ module.exports = function (grunt) {
         },
         watch: {
             jade: {
-                files: ['<%= yeoman.app %>/{,*/}*.jade'],
+                files: ['<%= yeoman.app %>/partails/{,*/}*.jade'],
                 tasks: ['jade']
             },
             coffee: {
@@ -66,7 +66,7 @@ module.exports = function (grunt) {
             },
             images: {
                 files: ['<%= yeoman.app %>/images/**/*.{png,jpg,jpeg,webp}'],
-                tasks: ['images','reload']
+                tasks: ['images']
             }
         },
         open: {
@@ -156,7 +156,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: '<%= yeoman.app %>',
                         dest: '.tmp',
-                        src: '{,*//*}*.jade',
+                        src: 'partials/*.jade',
                         ext: '.html'
                     }
                 ]
@@ -180,14 +180,14 @@ module.exports = function (grunt) {
             }
         },
         useminPrepare: {
-            // html: '.tmp/index.html',
-            html: '<%= yeoman.app %>/index.html',
+            html: '.tmp/index.html',
+            //html: '<%= yeoman.app %>/index.html',
             options: {
                 dest: '<%= yeoman.dist %>'
             }
         },
         usemin: {
-            html: ['<%= yeoman.dist %>/{,*/}*.html'],
+            html: ['<%= yeoman.dist %>/partials/*.html'],
             css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
             options: {
                 dirs: ['<%= yeoman.dist %>']
@@ -222,8 +222,8 @@ module.exports = function (grunt) {
                 files: {
                     '<%= yeoman.dist %>/styles/main.css': [
                         // list any css files you'd like to combine/minify into main.css here
-                        'app/components/normalize-css/normalize.css',
-                        'app/components/components-foundation/css/foundation.css',
+                        '<%= yeoman.app %>/components/normalize-css/normalize.css',
+                        '<%= yeoman.app %>/components/components-foundation/css/foundation.css',
                         '.tmp/styles/{,*/}*.css',
                         '<%= yeoman.app %>/styles/{,*/}*.css'
                     ]
@@ -248,7 +248,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: '.tmp',
                         // cwd: '<%= yeoman.app %>',
-                        src: ['*.html', 'views/*.html'],
+                        src: ['*.html', 'partials/*.html'],
                         dest: '<%= yeoman.dist %>'
                     }
                 ]
@@ -256,7 +256,7 @@ module.exports = function (grunt) {
         },
         cdnify: {
             dist: {
-                html: ['<%= yeoman.dist %>/*.html']
+                html: ['<%= yeoman.dist %>/partials/*.html']
             }
         },
         ngmin: {
@@ -295,8 +295,8 @@ module.exports = function (grunt) {
         copy: {
             css: {
                 files: {
-                    '.tmp/styles/normalize.css': 'app/components/normalize-css/normalize.css',
-                    '.tmp/styles/foundation.css': 'app/components/components-foundation/css/foundation.css'
+                    '.tmp/styles/normalize.css': '<%= yeoman.app %>/components/normalize-css/normalize.css',
+                    '.tmp/styles/foundation.css': '<%= yeoman.app %>/components/components-foundation/css/foundation.css'
                 }
             },
             dist: {

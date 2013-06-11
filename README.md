@@ -32,7 +32,7 @@ and respond to installation instructions (terminal command):
 
     mkdir app/styles/fonts
 
-1.7. delete public directory:
+1.7. delete public directory (terminal command):
 
     rm -rf public
 
@@ -56,33 +56,55 @@ and respond to installation instructions (terminal command):
 
 1.12. change following line in app.js, from:
 
-    - app.use(express.static(path.join(__dirname, 'public')));
+    app.use(express.static(path.join(__dirname, 'public')));
 
 to:
 
-    - app.use(express.static(path.join(__dirname, 'app')));
+    app.use(express.static(path.join(__dirname, 'app')));
 
 and add following line:
 
-    - app.use(express.static(path.join(__dirname, '.tmp')));
+    app.use(express.static(path.join(__dirname, '.tmp')));
 
-1.13. delete the following file:
+1.13. change following line in app.js, from:
+
+    , routes = require('./routes/index')
+
+to:
+
+    , welcome = require('./server/api/welcome')
+
+1.14. delete the following file:
 
     - app/index.html
 
 and replace with the following files (and content as per the default app):
 
-    - views/index.jade
-    - views/layout.jade
+    - app/views/index.jade
+    - app/views/layout.jade
 
-1.14. add the following to app.js (line 18):
+1.15. replace:
+
+    app.set('views', __dirname + '/views');
+
+with
+
+    app.set('views', __dirname + '/app');
+
+1.16. add the following to app.js (line 18):
 
     - app.locals.pretty = true;
 
-1.15. update "routes/index.js" to:
+1.17. create directory:
+
+    app/views/partials
+
+and move main.jade to this directory.
+
+1.18. move "routes/index.js" to "server/api/welcome.js" and update file to:
 
     /*
-     * GET home page.
+     * GET welcome page.
      */
 
     exports.index = function(req, res){
@@ -94,7 +116,7 @@ and replace with the following files (and content as per the default app):
         });
     };
 
-1.16. update "app/scripts/app.js" to:
+1.19. update "app/scripts/app.js" to:
 
     'use strict';
 
@@ -102,7 +124,7 @@ and replace with the following files (and content as per the default app):
       .config(function ($routeProvider) {
         $routeProvider
           .when('/', {
-            templateUrl: 'views/main.html',
+            templateUrl: 'partials/main.html',
             controller: 'mainCtrl'
           })
           .otherwise({
@@ -110,7 +132,7 @@ and replace with the following files (and content as per the default app):
           });
       });
 
-1.17. update "app/scripts/controllers/main.js" to:
+1.20. update "app/scripts/controllers/main.js" to:
 
     'use strict';
 
@@ -123,7 +145,9 @@ and replace with the following files (and content as per the default app):
         ];
       });
 
-1.18. update "views/layout.jade" to:
+1.25. move index.jade and layout.jade from "views" to "app"
+
+1.21. update "app/layout.jade" to:
 
     doctype 5
     //if lt IE 7
@@ -151,7 +175,7 @@ and replace with the following files (and content as per the default app):
         body(ng-app='#{ngApp}')
             block content
 
-1.19. update "views/index.jade" to:
+1.22. update "app/index.jade" to:
 
     extends layout
 
@@ -164,8 +188,8 @@ and replace with the following files (and content as per the default app):
             a(href='http://www.google.com/chromeframe/?redirect=true') install Google Chrome Frame
             | to better experience this site.
         //if lt IE 9
-        script(src='components/es5-shim/es5-shim.js')
-        script(src='components/json3/lib/json3.min.js')
+            script(src='components/es5-shim/es5-shim.js')
+            script(src='components/json3/lib/json3.min.js')
 
         // Add your site or application content here
         div(ng-controller="mainCtrl")
@@ -188,21 +212,61 @@ and replace with the following files (and content as per the default app):
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
 
+1.23. update app.js with error handling & 404 page, add following code:
+
+    // Handle 404
+    app.use(function(req, res) {
+        res.render('404.jade', {title: "404 - Page Not Found", showFullNav: false, status: 404, url: req.url });
+    });
+
+    // Handle 500
+    app.use(function(error, req, res, next) {
+        res.render('500.jade', {title: '500: Internal Server Error', status: 500, error: error});
+    });
+
+1.24. add 404.jade & 500.jade to app directory:
+
+1.27. add color to terminal (terminal command):
+
+    npm install colors --save
+
+and update app.js var:
+
+    , colors = require('colors');
+
+and replace server code with:
+
+    server.listen(app.get('port'), function(){
+        console.log("Express server listening in %s on port %d", colors.red(process.env.NODE_ENV), app.get('port'));
+    });
+
+1.28. update .jshintrc from:
+
+    "indent": 2,
+
+to
+    "indent": 4,
+
 
 ## Part 2: Karma Reconfiguration
 
 2.1. ensure PhantomJS installed globally:
-- brew install phantomjs
-- npm install -g phantomjs
+
+    brew install phantomjs
+    npm install -g phantomjs
 
 2.2. update "karma.conf.js", change:
-- browsers = ['Chrome'];
+
+    - browsers = ['Chrome'];
+
 to
-- browsers = ['PhantomJS'];
+
+    - browsers = ['PhantomJS'];
 
 2.3. move the following angular components from "app/components" to "test/lib/angular":
-- angular-mocks
-- angular-scenario
+
+    - angular-mocks
+    - angular-scenario
 
 2.4. update "karma.conf.js" from:
 
@@ -228,7 +292,8 @@ to
 ## Part 2: Jade Integration
 
 2.1. Install grunt-contrib-jade:
-- npm install grunt-contrib-jade --save-dev
+
+    - npm install grunt-contrib-jade --save-dev
 
 2.2. Add following these instructions (https://gist.github.com/kevva/5201657) with some slight mods, which provide details of how to update the Gruntfile.js.
 
@@ -299,7 +364,8 @@ to
 
 ## Part 3: Stylus Integration (into app, views & Grunt)
 
-3.1. Add the following files to "views/stylesheets":
+3.1. Add the following files to "app/styles":
+
 - _colors.styl
 - _layout.styl
 - _looks.styl
@@ -307,6 +373,7 @@ to
 - _mixins.styl
 
 3.2. Add var require to app.js:
+
 - , stylus = require('stylus')
 
 3.3. Replace in app.js:
@@ -318,11 +385,12 @@ with:
     app.use(stylus.middleware({
         src: __dirname + '/views'
             // It will add /stylesheets to this path.
-      , dest: __dirname + '/public'
+      , dest: __dirname + '/app'
     }));
 
 3.4. Install grunt for stylus:
-- npm install grunt-contrib-stylus --save-dev
+
+    - npm install grunt-contrib-stylus --save-dev
 
 3.5. Update Gruntfile.js (see this example http://engineering.yp.com/post/grunt) with the following:
 
@@ -870,4 +938,75 @@ with:
     };
 
 
-## Part 7: I18n & I10n Integration
+## Part 7: MongooseJS Integration
+
+7.1. install mongoosejs (terminal command):
+
+    - npm install mongoose --save
+
+7.2. update app.js to include mongoose and connection vars:
+
+    , mongoose = require('mongoose')
+    , db = mongoose.createConnection('localhost', 'default'),
+
+
+## Part 8: Socket.io Integration
+
+8.1. install socket.io (terminal command):
+
+    - npm install socket.io --save
+
+8.2. update app.js to include var:
+
+    var io = require('socket.io')
+
+
+## Part 9: Redis Integration
+
+9.1. install redis & hiredis (terminal command):
+
+    - npm install hiredis redis connect-redis --save
+
+9.2. update app.js after 'mongoose' var to include:
+
+    , RedisStore = require('redis-connect')(express);
+
+9.3. replace:
+
+    app.use(express.session());
+
+with (replace 'MyLittleSecret' with your own secret):
+
+    app.use(express.session({
+        store: new RedisStore,
+        secret: 'MyLittleSecret'
+    }));
+
+
+## Part 10: CSRF Protection For ExpressJS and AngularJS (see http://mircozeiss.com/using-csrf-with-express-and-angular/)
+
+10.1. update app.js to include (after var io):
+
+    var csrfValue = function(req) {
+        var token = (req.body && req.body._csrf)
+            || (req.query && req.query._csrf)
+            || (req.headers['x-csrf-token'])
+            || (req.headers['x-xsrf-token']);
+        return token;
+    };
+
+and replace:
+
+    app.use(express.cookieSession());):
+
+with:
+
+    app.use(express.session({
+        store: new RedisStore,
+        secret: 'hdy72by3s8su28js2uk9ie90u2389d23rytg4710yj18d14678239s470'
+    }));
+    app.use(express.csrf({value: csrfValue}));
+    app.use(function(req, res, next) {
+        res.cookie('XSRF-TOKEN', req.session._csrf);
+        next();
+    });
