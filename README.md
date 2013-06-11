@@ -28,9 +28,11 @@ and respond to installation instructions (terminal command):
 
     n,n,Y,Y,Y
 
+1.6. rename "app" directory to "client"
+
 1.6. add directory (terminal command):
 
-    mkdir app/styles/fonts
+    mkdir client/styles/fonts
 
 1.7. delete public directory (terminal command):
 
@@ -60,7 +62,7 @@ and respond to installation instructions (terminal command):
 
 to:
 
-    app.use(express.static(path.join(__dirname, 'app')));
+    app.use(express.static(path.join(__dirname, 'client')));
 
 and add following line:
 
@@ -74,14 +76,16 @@ to:
 
     , welcome = require('./server/api/welcome')
 
+1.25. move index.jade and layout.jade from "views" to "client"
+
 1.14. delete the following file:
 
-    - app/index.html
+    - client/index.html
 
 and replace with the following files (and content as per the default app):
 
-    - app/views/index.jade
-    - app/views/layout.jade
+    - client/index.jade
+    - client/layout.jade
 
 1.15. replace:
 
@@ -89,7 +93,7 @@ and replace with the following files (and content as per the default app):
 
 with
 
-    app.set('views', __dirname + '/app');
+    app.set('views', __dirname + '/client');
 
 1.16. add the following to app.js (line 18):
 
@@ -97,9 +101,11 @@ with
 
 1.17. create directory:
 
-    app/views/partials
+    client/partials
 
-and move main.jade to this directory.
+and move the following to this directory:
+
+    client/views/main.jade
 
 1.18. move "routes/index.js" to "server/api/welcome.js" and update file to:
 
@@ -116,7 +122,7 @@ and move main.jade to this directory.
         });
     };
 
-1.19. update "app/scripts/app.js" to:
+1.19. update "client/scripts/app.js" to:
 
     'use strict';
 
@@ -132,7 +138,7 @@ and move main.jade to this directory.
           });
       });
 
-1.20. update "app/scripts/controllers/main.js" to:
+1.20. update "client/scripts/controllers/main.js" to:
 
     'use strict';
 
@@ -145,9 +151,7 @@ and move main.jade to this directory.
         ];
       });
 
-1.25. move index.jade and layout.jade from "views" to "app"
-
-1.21. update "app/layout.jade" to:
+1.21. update "client/layout.jade" to:
 
     doctype 5
     //if lt IE 7
@@ -175,7 +179,7 @@ and move main.jade to this directory.
         body(ng-app='#{ngApp}')
             block content
 
-1.22. update "app/index.jade" to:
+1.22. update "client/index.jade" to:
 
     extends layout
 
@@ -224,7 +228,7 @@ and move main.jade to this directory.
         res.render('500.jade', {title: '500: Internal Server Error', status: 500, error: error});
     });
 
-1.24. add 404.jade & 500.jade to app directory:
+1.24. add 404.jade & 500.jade to "client" directory:
 
 1.27. add color to terminal (terminal command):
 
@@ -273,9 +277,11 @@ to
     files = [
       JASMINE,
       JASMINE_ADAPTER,
-        …
+      'app/components/angular/angular.js',
       'app/components/angular-mocks/angular-mocks.js',
-        …
+      'app/scripts/*.js',
+      'app/scripts/**/*.js',
+      ...
     ];
 
     to:
@@ -283,8 +289,10 @@ to
     files = [
       JASMINE,
       JASMINE_ADAPTER,
-        …
-      'test/lib/angular-mocks/angular-mocks.js',
+       'client/components/angular/angular.js',
+       'test/lib/angular-mocks/angular-mocks.js',
+       'client/scripts/*.js',
+       'client/scripts/**/*.js',
         …
     ];
 
@@ -315,18 +323,8 @@ to
     watch: {
 			...
       jade: {
-        files: ['<%= yeoman.app %>/{,*/}*.jade'],
+        files: ['<%= yeoman.app %>/partails/{,*/}*.jade'],
         tasks: ['jade']
-      },
-      livereload: {
-        files: [
-          '.tmp/{,*/}*.html',
-          '<%= yeoman.app %>/{,*/}*.html',
-          '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
-          '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-        ],
-        tasks: ['livereload']
       }
     },
     useminPrepare: {
@@ -336,6 +334,13 @@ to
         dest: '<%= yeoman.dist %>'
       }
     },
+    usemin: {
+      html: ['<%= yeoman.dist %>/partials/*.html'],
+      css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+      options: {
+        dirs: ['<%= yeoman.dist %>']
+      }
+    },
     htmlmin: {
       dist: {
 				...
@@ -343,17 +348,17 @@ to
           expand: true,
           cwd: '.tmp',
           // cwd: '<%= yeoman.app %>',
-          src: ['*.html', 'views/*.html'],
+          src: ['*.html', 'partials/*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }
     },
 
-  grunt.registerTask('server', [
-		…
-    'jade',
-		…
-  ]);
+    grunt.registerTask('server', [
+        …
+        'jade',
+        …
+    ]);
 
     grunt.registerTask('build', [
             …
@@ -371,22 +376,6 @@ to
 - _looks.styl
 - _typography.styl
 - _mixins.styl
-
-3.2. Add var require to app.js:
-
-- , stylus = require('stylus')
-
-3.3. Replace in app.js:
-
-    app.use(stylus.middleware(__dirname + '/public'));
-
-with:
-
-    app.use(stylus.middleware({
-        src: __dirname + '/views'
-            // It will add /stylesheets to this path.
-      , dest: __dirname + '/app'
-    }));
 
 3.4. Install grunt for stylus:
 

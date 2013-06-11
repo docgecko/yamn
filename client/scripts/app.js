@@ -4,7 +4,7 @@ angular.module('mainApp', [])
     .config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'partials/main.html',
+                templateUrl: 'views/main/index.html',
                 controller: 'mainCtrl'
             })
             .otherwise({

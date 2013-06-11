@@ -11,7 +11,7 @@ var express = require('express')
   , io = require('socket.io').listen(server)
   , mongoose = require('mongoose')
   , RedisStore = require('connect-redis')(express)
-  , db = mongoose.createConnection('localhost', 'default')
+  , db = mongoose.createConnection('localhost', 'myapp')
   , colors = require('colors');
 
 var csrfValue = function (req) {
@@ -45,7 +45,7 @@ app.use(app.router);
 
 // host dev files if in dev mode
 if ('development' == app.get('env')) {
-    app.use(express.static(path.join(__dirname, 'app')));
+    app.use(express.static(path.join(__dirname, 'client')));
     app.use(express.static(path.join(__dirname, '.tmp')));
 } else {
     app.use(express.static(path.join(__dirname, 'dist')));

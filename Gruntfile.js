@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 //        'Gruntfile.js',
         '/.git/',
         '/node_modules/',
-//        '/app/',
+//        '/client/',
 //        '/dist/',
         '/test/',
 //        '/temp/',
@@ -41,7 +41,7 @@ module.exports = function (grunt) {
         },
         watch: {
             jade: {
-                files: ['<%= yeoman.app %>/partails/{,*/}*.jade'],
+                files: ['<%= yeoman.app %>/views/{,*/}*.jade'],
                 tasks: ['jade']
             },
             coffee: {
@@ -156,7 +156,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: '<%= yeoman.app %>',
                         dest: '.tmp',
-                        src: 'partials/*.jade',
+                        src: 'views/{,*/}*.jade',
                         ext: '.html'
                     }
                 ]
@@ -187,7 +187,7 @@ module.exports = function (grunt) {
             }
         },
         usemin: {
-            html: ['<%= yeoman.dist %>/partials/*.html'],
+            html: ['<%= yeoman.dist %>/views/{,*/}*.html'],
             css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
             options: {
                 dirs: ['<%= yeoman.dist %>']
@@ -248,7 +248,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: '.tmp',
                         // cwd: '<%= yeoman.app %>',
-                        src: ['*.html', 'partials/*.html'],
+                        src: ['*.html', 'views/{,*/}*.html'],
                         dest: '<%= yeoman.dist %>'
                     }
                 ]
@@ -256,7 +256,7 @@ module.exports = function (grunt) {
         },
         cdnify: {
             dist: {
-                html: ['<%= yeoman.dist %>/partials/*.html']
+                html: ['<%= yeoman.dist %>/views/{,*/}*.html']
             }
         },
         ngmin: {
