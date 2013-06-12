@@ -1,39 +1,79 @@
-extends layout
+doctype 5
+//if lt IE 7
+	html(class="no-js lt-ie9 lt-ie8 lt-ie7", ng-app="app")
+//if IE 7
+	html(class="no-js lt-ie9 lt-ie8", ng-app="app")
+//if IE 8
+	html(class="no-js lt-ie9", ng-app="app")
+// [if gt IE 8] <!
+html(class="no-js", ng-app="app")
+	// <![endif]
+	head
+		block meta
+			meta(charset='utf-8')
+			meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+			meta(name='description', content='')
+			meta(name='viewport', content='width=device-width')
 
-block body
-	block iesupport
-		//if lt IE 7
-			p.chromeframe
-			| You are using an outdated browser.
-			a(href='http://browsehappy.com/') Upgrade your browser today
-			| or
-			a(href='http://www.google.com/chromeframe/?redirect=true') install Google Chrome Frame
-			| to better experience this site.
-		//if lt IE 9
-		script(src='components/es5-shim/es5-shim.js')
-		script(src='components/json3/lib/json3.min.js')
+		block title
+			title= title
 
-	block content
-		// Add your site or application content here
-		div.row(ng-controller="mainCtrl")
-			div.large-6.columns
-				.section-container(ng-view)
+		block links
+			link(type='text/plain', rel='author', href='http://localhost:9000/humans.txt')
 
-	block angular
-		script(src='components/angular/angular.js')
-		script(src='components/angular-resource/angular-resource.js')
-		script(src='components/angular-cookies/angular-cookies.js')
-		script(src='components/angular-sanitize/angular-sanitize.js')
+		// Place favicon.ico and apple-touch-icon.png in the root directory
 
-	block scripts
-		// build:js scripts/scripts.js
-		script(src='scripts/app.js')
-		// script(src='scripts/controllers/#{scriptCtrl}.js')
-		// endbuild
+		block css
+			// build:css styles/main.css
+			link(rel='stylesheet', href='styles/normalize.css')
+			link(rel='stylesheet', href='styles/foundation.css')
+			link(rel='stylesheet', href='styles/application.css')
+			// endbuild
 
-		// Google Analytics: change UA-XXXXX-X to be your site's ID.
-		script.
-			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-			s.parentNode.insertBefore(g,s)}(document,'script'));
+		block socket.io
+			// io Scripts
+			script(src="/socket.io/socket.io.js")
+			script.
+				var socket = io.connect('http://localhost:9000');
+				socket.on('news', function (data) {
+					console.log(data);
+					socket.emit('my other event', { my: 'data' });
+				});
+
+	body(ng-controller="AppCtrl")
+		block iesupport
+			//if lt IE 7
+				p.chromeframe
+				| You are using an outdated browser.
+				a(href='http://browsehappy.com/') Upgrade your browser today
+				| or
+				a(href='http://www.google.com/chromeframe/?redirect=true') install Google Chrome Frame
+				| to better experience this site.
+			//if lt IE 9
+				script(src='components/es5-shim/es5-shim.js')
+				script(src='components/json3/lib/json3.min.js')
+
+		block content
+			// Add your site or application content here
+			div.row
+				div.large-6.columns
+					.section-container(ng-view)
+
+		block angular
+			script(src='components/angular/angular.js')
+			script(src='components/angular-resource/angular-resource.js')
+			script(src='components/angular-cookies/angular-cookies.js')
+			script(src='components/angular-sanitize/angular-sanitize.js')
+
+		block scripts
+			// build:js scripts/scripts.js
+			script(src='app/app.js')
+			script(src='app/home/home.js')
+			// endbuild
+
+			// Google Analytics: change UA-XXXXX-X to be your site's ID.
+			script.
+				var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+				(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+				g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+				s.parentNode.insertBefore(g,s)}(document,'script'));

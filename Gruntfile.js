@@ -41,11 +41,11 @@ module.exports = function (grunt) {
         },
         watch: {
             jade: {
-                files: ['<%= yeoman.app %>/views/{,*/}*.jade'],
+                files: ['<%= yeoman.app %>/app/{,*/}*.jade'],
                 tasks: ['jade']
             },
             coffee: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
+                files: ['<%= yeoman.app %>/app/{,*/}*.coffee'],
                 tasks: ['coffee:dist']
             },
             coffeeTest: {
@@ -66,7 +66,7 @@ module.exports = function (grunt) {
             },
             images: {
                 files: ['<%= yeoman.app %>/images/**/*.{png,jpg,jpeg,webp}'],
-                tasks: ['images']
+                tasks: ['images','reload']
             }
         },
         open: {
@@ -95,7 +95,7 @@ module.exports = function (grunt) {
             },
             all: [
                 'Gruntfile.js',
-                '<%= yeoman.app %>/scripts/{,*/}*.js'
+                '<%= yeoman.app %>/app/{,*/}*.js'
                 //'test/spec/{,*/}*.js'
             ]
         },
@@ -110,9 +110,9 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= yeoman.app %>/scripts',
+                        cwd: '<%= yeoman.app %>/app',
                         src: '{,*/}*.coffee',
-                        dest: '.tmp/scripts',
+                        dest: '.tmp/app',
                         ext: '.js'
                     }
                 ]
@@ -134,8 +134,8 @@ module.exports = function (grunt) {
                 sassDir: '<%= yeoman.app %>/styles',
                 cssDir: '.tmp/styles',
                 imagesDir: '<%= yeoman.app %>/images',
-                javascriptsDir: '<%= yeoman.app %>/scripts',
-                fontsDir: '<%= yeoman.app %>/styles/fonts',
+                javascriptsDir: '<%= yeoman.app %>/app',
+                fontsDir: '<%= yeoman.app %>/assets/fonts',
                 importPath: '<%= yeoman.app %>/components',
                 relativeAssets: true
             },
@@ -156,7 +156,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: '<%= yeoman.app %>',
                         dest: '.tmp',
-                        src: 'views/{,*/}*.jade',
+                        src: 'app/{,*/}*.jade',
                         ext: '.html'
                     }
                 ]
@@ -172,9 +172,9 @@ module.exports = function (grunt) {
         concat: {
             dist: {
                 files: {
-                    '<%= yeoman.dist %>/scripts/scripts.js': [
-                        '.tmp/scripts/{,*/}*.js',
-                        '<%= yeoman.app %>/scripts/{,*/}*.js'
+                    '<%= yeoman.dist %>/app/scripts.js': [
+                        '.tmp/app/{,*/}*.js',
+                        '<%= yeoman.app %>/app/{,*/}*.js'
                     ]
                 }
             }
@@ -187,7 +187,7 @@ module.exports = function (grunt) {
             }
         },
         usemin: {
-            html: ['<%= yeoman.dist %>/views/{,*/}*.html'],
+            html: ['<%= yeoman.dist %>/app/{,*/}*.html'],
             css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
             options: {
                 dirs: ['<%= yeoman.dist %>']
@@ -248,7 +248,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: '.tmp',
                         // cwd: '<%= yeoman.app %>',
-                        src: ['*.html', 'views/{,*/}*.html'],
+                        src: ['*.html', 'app/{,*/}*.html'],
                         dest: '<%= yeoman.dist %>'
                     }
                 ]
@@ -256,7 +256,7 @@ module.exports = function (grunt) {
         },
         cdnify: {
             dist: {
-                html: ['<%= yeoman.dist %>/views/{,*/}*.html']
+                html: ['<%= yeoman.dist %>/app/{,*/}*.html']
             }
         },
         ngmin: {
@@ -264,9 +264,9 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= yeoman.dist %>/scripts',
+                        cwd: '<%= yeoman.dist %>/app',
                         src: '*.js',
-                        dest: '<%= yeoman.dist %>/scripts'
+                        dest: '<%= yeoman.dist %>/app'
                     }
                 ]
             }
@@ -274,8 +274,8 @@ module.exports = function (grunt) {
         uglify: {
             dist: {
                 files: {
-                    '<%= yeoman.dist %>/scripts/scripts.js': [
-                        '<%= yeoman.dist %>/scripts/scripts.js'
+                    '<%= yeoman.dist %>/app/scripts.js': [
+                        '<%= yeoman.dist %>/app/scripts.js'
                     ]
                 }
             }
@@ -284,7 +284,7 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     src: [
-                        '<%= yeoman.dist %>/scripts/{,*/}*.js',
+                        '<%= yeoman.dist %>/app/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
                         '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
                         '<%= yeoman.dist %>/styles/fonts/*'
@@ -311,7 +311,7 @@ module.exports = function (grunt) {
                             '.htaccess',
                             'components/**/*',
                             'images/{,*/}*.{gif,webp}',
-                            'styles/fonts/*'
+                            'assets/fonts/*'
                         ]
                     }
                 ]
@@ -361,7 +361,7 @@ module.exports = function (grunt) {
                         'scss'
                     ],
                     // nodemon watches the current directory recursively by default
-                    watchedFolders: ['app', 'dist','.tmp'],
+                    watchedFolders: ['client', 'dist','.tmp'],
                     debug: true,
                     delayTime: 1,
                     ignoredFiles: nodemonIgnoredFiles

@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('mainApp', [])
+angular.module('app', [])
     .config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'views/main/index.html',
-                controller: 'mainCtrl'
+                templateUrl: 'index.tpl.html',
+                controller: 'AppCtrl'
             })
             .otherwise({
                 redirectTo: '/'

@@ -9,8 +9,8 @@ files = [
   JASMINE_ADAPTER,
   'client/components/angular/angular.js',
   'test/lib/angular-mocks/angular-mocks.js',
-  'client/scripts/*.js',
-  'client/scripts/**/*.js',
+  'client/app/*.js',
+  'client/app/**/*.js',
   'test/mock/**/*.js',
   'test/spec/**/*.js'
 ];
