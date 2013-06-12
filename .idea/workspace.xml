@@ -5,27 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcbcb548-cac2-429f-9b4f-5e68da264a24" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/home/index.tpl.jade" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/layout.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/main/index.jade" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/scripts/app.js" afterPath="$PROJECT_DIR$/client/app/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/scripts/controllers/mainController.js" afterPath="$PROJECT_DIR$/client/app/home/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/home/home.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/home/index.tpl.jade" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.js" afterPath="$PROJECT_DIR$/client/app/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.jade" afterPath="$PROJECT_DIR$/client/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="$PROJECT_DIR$/karma.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/main.js" afterPath="$PROJECT_DIR$/test/spec/controllers/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/welcome.js" afterPath="$PROJECT_DIR$/server/api/welcome.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="default.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/.editorconfig" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370176215934" ignored="false" />
     <file path="/Gruntfile.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371031226721" ignored="false" />
-    <file path="/index.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371031339684" ignored="false" />
+    <file path="/index.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371034632186" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/angular-sanitize/angular-sanitize.min.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369758653875" ignored="false" />
     <file path="/index.html" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369821158344" ignored="false" />
     <file path="/layout.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371028151516" ignored="false" />
-    <file path="/app.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370950392711" ignored="false" />
+    <file path="/app.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371034410914" ignored="false" />
     <file path="/main.styl" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369826899321" ignored="false" />
     <file path="$PROJECT_DIR$/../../HotPie/views/stylesheets/sidewalk.styl" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369831669932" ignored="false" />
     <file path="/.bowerrc" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369835939464" ignored="false" />
@@ -55,7 +49,7 @@
     <file path="/application.styl" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370357472638" ignored="false" />
     <file path="/sidewalk.styl" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370507831240" ignored="false" />
     <file path="$PROJECT_DIR$/.tmp/views/main.html" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370518330295" ignored="false" />
-    <file path="/welcome.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370978286476" ignored="false" />
+    <file path="/welcome.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371039734094" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +72,7 @@
       <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="19" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.0">
+            <state line="70" column="37" selection-start="2104" selection-end="2104" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,7 +81,25 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="19" selection-start="372" selection-end="372" vertical-scroll-proportion="0.28688523">
+            <state line="9" column="34" selection-start="262" selection-end="262" vertical-scroll-proportion="0.18442623">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/welcome/welcome.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="8" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="2" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,11 +124,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/views/index.jade" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/client/apps/welcome/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/client/views/main/index.jade" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/client/layout.jade" />
@@ -126,7 +135,10 @@
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/karma.conf.js" />
         <option value="$PROJECT_DIR$/server/api/welcome.js" />
+        <option value="$PROJECT_DIR$/client/app/home/home.js" />
+        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/client/index.jade" />
+        <option value="$PROJECT_DIR$/client/app/welcome/welcome.js" />
         <option value="$PROJECT_DIR$/client/app/app.js" />
       </list>
     </option>
@@ -285,7 +297,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
+              <option name="myItemId" value="welcome" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,10 +312,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value=".tmp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -325,7 +333,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
+              <option name="myItemId" value="welcome" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -543,13 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/app/home/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/karma.conf.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="313" selection-end="313" vertical-scroll-proportion="0.2503477">
@@ -559,35 +560,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="2" selection-start="312" selection-end="312" vertical-scroll-proportion="0.29207233">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/welcome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="24" selection-start="113" selection-end="113" vertical-scroll-proportion="0.14344262">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/home/index.tpl.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="14" column="2" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="19" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.0">
+        <state line="70" column="37" selection-start="2104" selection-end="2104" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="43" selection-start="102" selection-end="109" vertical-scroll-proportion="0.10431154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/welcome/welcome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="8" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="19" selection-start="372" selection-end="372" vertical-scroll-proportion="0.28688523">
+        <state line="9" column="34" selection-start="262" selection-end="262" vertical-scroll-proportion="0.18442623">
           <folding />
         </state>
       </provider>

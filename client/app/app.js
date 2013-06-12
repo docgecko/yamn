@@ -1,14 +1,10 @@
 'use strict';
 
-angular.module('app', [])
+angular.module('app', ['welcome'])
     .config(function ($routeProvider, $locationProvider) {
         $routeProvider
-            .when('/', {
-                templateUrl: 'index.tpl.html',
-                controller: 'AppCtrl'
-            })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: '/welcome'
             });
         $locationProvider.html5Mode(true);
     });
