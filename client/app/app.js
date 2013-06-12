@@ -1,10 +1,15 @@
 'use strict';
 
 angular.module('app', ['welcome'])
-    .config(function ($routeProvider, $locationProvider) {
+
+    .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider
             .otherwise({
-                redirectTo: '/welcome'
+                redirectTo: '/'
             });
         $locationProvider.html5Mode(true);
-    });
+    }])
+
+    .controller('AppCtrl', ['$scope', function ($scope) {
+        console.log($scope);
+    }]);

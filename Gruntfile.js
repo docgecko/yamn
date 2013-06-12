@@ -248,7 +248,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: '.tmp',
                         // cwd: '<%= yeoman.app %>',
-                        src: ['*.html', 'app/{,*/}*.html'],
+                        src: ['app/{,*/}*.html'],
                         dest: '<%= yeoman.dist %>'
                     }
                 ]
@@ -361,7 +361,7 @@ module.exports = function (grunt) {
                         'scss'
                     ],
                     // nodemon watches the current directory recursively by default
-                    watchedFolders: ['client', 'dist','.tmp'],
+                    watchedFolders: ['app', 'dist','.tmp'],
                     debug: true,
                     delayTime: 1,
                     ignoredFiles: nodemonIgnoredFiles
