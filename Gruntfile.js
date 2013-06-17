@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         '/test/',
 //        '/temp/',
 //        '/.tmp',
-        '/.sass-cache'
+//        '/.sass-cache'
 //        '*.txt',
 //        '*.jade'
     ];
@@ -164,7 +164,10 @@ module.exports = function (grunt) {
                 files: {
                     '<%= yeoman.dist %>/app/scripts.js': [
                         '.tmp/app{,*/}*.js',
-                        '<%= yeoman.app %>/app/{,*/}*.js'
+                        '<%= yeoman.app %>/app/{,*/}*.js',
+                    ],
+                    '.tmp/styles/application.css': [
+                        '.tmp/styles/{,*/}*.css'
                     ]
                 }
             }
@@ -366,6 +369,7 @@ module.exports = function (grunt) {
                         'jade',
                         'html',
                         'css',
+                        'less',
                         'scss'
                     ],
                     // nodemon watches the current directory recursively by default

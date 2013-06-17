@@ -5,7 +5,7 @@ angular.module('welcome', [])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'src/app/welcome/index.html',
+                templateUrl: 'app/welcome/index.html',
                 controller: 'WelcomeCtrl'
             });
     }])
