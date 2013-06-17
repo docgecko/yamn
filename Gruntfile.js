@@ -32,6 +32,17 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         yeoman: yeomanConfig,
+        src: {
+            js: ['src/**/*.js', '<%= distdir %>/templates/**/*.js'],
+            specs: ['test/**/*.spec.js'],
+            scenarios: ['test/**/*.scenario.js'],
+            html: ['src/index.html'],
+            tpl: {
+                app: ['src/app/**/*.tpl.html'],
+                common: ['src/common/**/*.tpl.html']
+            },
+            styl: ['src/styles/*.styl'] // recess:build doesn't accept ** in its file patterns
+        },
         reload: {
             port: 6001,
             proxy: {
@@ -41,11 +52,11 @@ module.exports = function (grunt) {
         },
         watch: {
             jade: {
-                files: ['<%= yeoman.app %>/app/{,*/}*.jade'],
+                files: ['<%= yeoman.app %>/src/app/{,*/}*.jade'],
                 tasks: ['jade']
             },
             coffee: {
-                files: ['<%= yeoman.app %>/app/{,*/}*.coffee'],
+                files: ['<%= yeoman.app %>/src/app/{,*/}*.coffee'],
                 tasks: ['coffee:dist']
             },
             coffeeTest: {
@@ -53,11 +64,11 @@ module.exports = function (grunt) {
                 tasks: ['coffee:test']
             },
             compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+                files: ['<%= yeoman.app %>/src/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass']
             },
             stylus: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.styl'],
+                files: ['<%= yeoman.app %>/src/styles/{,*/}*.styl'],
                 tasks: ['stylus']
             },
             css: {
@@ -65,7 +76,7 @@ module.exports = function (grunt) {
                 tasks: ['reload']
             },
             images: {
-                files: ['<%= yeoman.app %>/images/**/*.{png,jpg,jpeg,webp}'],
+                files: ['<%= yeoman.app %>/src/assets/images/**/*.{png,jpg,jpeg,webp}'],
                 tasks: ['images','reload']
             }
         },
@@ -95,7 +106,7 @@ module.exports = function (grunt) {
             },
             all: [
                 'Gruntfile.js',
-                '<%= yeoman.app %>/app/{,*/}*.js'
+                '<%= yeoman.app %>/src/app/{,*/}*.js'
                 //'test/spec/{,*/}*.js'
             ]
         },
@@ -110,7 +121,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= yeoman.app %>/app',
+                        cwd: '<%= yeoman.app %>/src/app',
                         src: '{,*/}*.coffee',
                         dest: '.tmp/app',
                         ext: '.js'
@@ -131,12 +142,12 @@ module.exports = function (grunt) {
         },
         compass: {
             options: {
-                sassDir: '<%= yeoman.app %>/styles',
+                sassDir: '<%= yeoman.app %>/src/styles',
                 cssDir: '.tmp/styles',
-                imagesDir: '<%= yeoman.app %>/images',
-                javascriptsDir: '<%= yeoman.app %>/app',
-                fontsDir: '<%= yeoman.app %>/assets/fonts',
-                importPath: '<%= yeoman.app %>/components',
+                imagesDir: '<%= yeoman.app %>/src/assets/images',
+                javascriptsDir: '<%= yeoman.app %>/src/app',
+                fontsDir: '<%= yeoman.app %>/src/assets/fonts',
+                importPath: '<%= yeoman.app %>/src/components',
                 relativeAssets: true
             },
             dist: {},
@@ -155,8 +166,8 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: '<%= yeoman.app %>',
-                        dest: '.tmp',
-                        src: 'app/{,*/}*.jade',
+                        dest: '.tmp/',
+                        src: 'src/app/{,*/}*.jade',
                         ext: '.html'
                     }
                 ]
@@ -165,7 +176,7 @@ module.exports = function (grunt) {
         stylus: {
             compile: {
                 files: {
-                    '.tmp/styles/application.css': '<%= yeoman.app %>/styles/*.styl'
+                    '.tmp/styles/application.css': '<%= yeoman.app %>/src/styles/*.styl'
                 }
             }
         },
@@ -173,22 +184,22 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     '<%= yeoman.dist %>/app/scripts.js': [
-                        '.tmp/app/{,*/}*.js',
-                        '<%= yeoman.app %>/app/{,*/}*.js'
+                        '.tmp/app{,*/}*.js',
+                        '<%= yeoman.app %>/src/app/{,*/}*.js'
                     ]
                 }
             }
         },
         useminPrepare: {
-            html: '.tmp/index.html',
+            html: '.tmp/src/index.html',
             //html: '<%= yeoman.app %>/index.html',
             options: {
                 dest: '<%= yeoman.dist %>'
             }
         },
         usemin: {
-            html: ['<%= yeoman.dist %>/app/{,*/}*.html'],
-            css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+            html: ['<%= yeoman.dist %>/src/app/{,*/}*.html'],
+            css: ['<%= yeoman.dist %>/src/styles/{,*/}*.css'],
             options: {
                 dirs: ['<%= yeoman.dist %>']
             }
@@ -198,7 +209,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= yeoman.app %>/images',
+                        cwd: '<%= yeoman.app %>/src/assets/images',
                         src: '{,*/}*.{png,jpg,jpeg}',
                         dest: '<%= yeoman.dist %>/images'
                     }
@@ -210,7 +221,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= yeoman.app %>/images',
+                        cwd: '<%= yeoman.app %>/src/assets/images',
                         src: '{,*/}*.svg',
                         dest: '<%= yeoman.dist %>/images'
                     }
@@ -222,8 +233,8 @@ module.exports = function (grunt) {
                 files: {
                     '<%= yeoman.dist %>/styles/main.css': [
                         // list any css files you'd like to combine/minify into main.css here
-                        '<%= yeoman.app %>/components/normalize-css/normalize.css',
-                        '<%= yeoman.app %>/components/components-foundation/css/foundation.css',
+                        '<%= yeoman.app %>/src/components/normalize-css/normalize.css',
+                        '<%= yeoman.app %>/src/components/components-foundation/css/foundation.css',
                         '.tmp/styles/{,*/}*.css',
                         '<%= yeoman.app %>/styles/{,*/}*.css'
                     ]
@@ -248,7 +259,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: '.tmp',
                         // cwd: '<%= yeoman.app %>',
-                        src: ['app/{,*/}*.html'],
+                        src: ['src/app/{,*/}*.html'],
                         dest: '<%= yeoman.dist %>'
                     }
                 ]
@@ -287,7 +298,7 @@ module.exports = function (grunt) {
                         '<%= yeoman.dist %>/app/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
                         '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-                        '<%= yeoman.dist %>/styles/fonts/*'
+                        '<%= yeoman.dist %>/fonts/*'
                     ]
                 }
             }
@@ -295,8 +306,8 @@ module.exports = function (grunt) {
         copy: {
             css: {
                 files: {
-                    '.tmp/styles/normalize.css': '<%= yeoman.app %>/components/normalize-css/normalize.css',
-                    '.tmp/styles/foundation.css': '<%= yeoman.app %>/components/components-foundation/css/foundation.css'
+                    '.tmp/styles/normalize.css': '<%= yeoman.app %>/src/components/normalize-css/normalize.css',
+                    '.tmp/styles/foundation.css': '<%= yeoman.app %>/src/components/components-foundation/css/foundation.css'
                 }
             },
             dist: {
@@ -361,7 +372,7 @@ module.exports = function (grunt) {
                         'scss'
                     ],
                     // nodemon watches the current directory recursively by default
-                    watchedFolders: ['app', 'dist','.tmp'],
+                    watchedFolders: ['client', 'dist','.tmp'],
                     debug: true,
                     delayTime: 1,
                     ignoredFiles: nodemonIgnoredFiles

@@ -5,9 +5,9 @@ angular.module('welcome', [])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'app/welcome/index.html',
+                templateUrl: 'src/app/welcome/index.html',
                 controller: 'WelcomeCtrl'
-        });
+            });
     }])
 
     .controller('WelcomeCtrl', ['$scope', function ($scope) {
