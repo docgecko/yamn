@@ -17,10 +17,10 @@ module.exports = function (grunt) {
         '/node_modules/',
 //        '/client/',
 //        '/dist/',
-        '/test/',
+        '/test/'
 //        '/temp/',
 //        '/.tmp',
-//        '/.sass-cache'
+//        '/.sass-cache',
 //        '*.txt',
 //        '*.jade'
     ];
@@ -145,7 +145,7 @@ module.exports = function (grunt) {
         less: {
             dist: {
                 options: {
-                    yuicompress: true
+                    yuicompress: false
                 },
                 files: [
                     {
@@ -164,10 +164,7 @@ module.exports = function (grunt) {
                 files: {
                     '<%= yeoman.dist %>/app/scripts.js': [
                         '.tmp/app{,*/}*.js',
-                        '<%= yeoman.app %>/app/{,*/}*.js',
-                    ],
-                    '.tmp/styles/application.css': [
-                        '.tmp/styles/{,*/}*.css'
+                        '<%= yeoman.app %>/app/{,*/}*.js'
                     ]
                 }
             }
