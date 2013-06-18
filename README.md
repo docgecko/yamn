@@ -17,22 +17,24 @@ $ bower install --save-dev
 $ grunt server
 ```
 
-Visit [http://localhost:9000](http://localhost:9000) to view home page and open [http://localhost:6001](http://localhost:6001) to see reload of updated less & jade files.
+Visit [http://localhost:9000](http://localhost:9000) to view home page.
+Also, open [http://localhost:6001](http://localhost:6001) to see reload of updated less & jade files - this page will only show updates as the less or jade files are updated.
 
 Happy hacking!
 
 ## Purpose
 
-TBD
+// TODO:
 
 ## Philosophy
 
-TBD
+// TODO:
+
 ## Learn
 
 ### Overall Directory Structure
 
-At a high level, the structure looks roughly like this:
+At a high level, the structure looks closely like this:
 
 ```
 yamn/
@@ -76,7 +78,6 @@ yamn/
   |- README.md
 ```
 
+The following is a brief description of each section of the directory structure.
 
-What follows is a brief description of each entry, but all directories contain
-their own `README.md` file with additional documentation, so browse around to
-learn more.
+Note that all directories contain their own `README.md` file with additional documentation - browse those to learn more.
