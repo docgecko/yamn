@@ -33,43 +33,22 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         yeoman: yeomanConfig,
-        reload: {
-            port: 6001,
-            proxy: {
-                host: 'localhost',
-                port: 9000 // should match server.port config
-            }
-        },
-        watch: {
-            jade: {
-                files: ['<%= yeoman.app %>/app/{,*/}*.jade'],
-                tasks: ['jade', 'reload']
+        pkg: grunt.file.readJSON('package.json'),
+        banner:
+            '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+            '<%= pkg.homepage ? " * " + pkg.homepage + "\\n" : "" %>' +
+            ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>;\n' +
+            ' * Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %>\n */\n',
+        src: {
+            js: ['client/app/{,*/}/*.js', '<%= yeoman.dist %>/app/{,*/}*.js'],
+            specs: ['test/{,*/}*.spec.js'],
+            scenarios: ['test/{,*/}/*.scenario.js'],
+            html: ['client/index.html'],
+            tpl: {
+                app: ['client/app/{,*/}*.tpl.html'],
+                common: ['client/app/common/{,*/}*.tpl.html']
             },
-            coffee: {
-                files: ['<%= yeoman.app %>/app/{,*/}*.coffee'],
-                tasks: ['coffee:dist']
-            },
-            coffeeTest: {
-                files: ['test/unit/{,*/}*.coffee', 'test/e2e/{,*/}*.coffee'],
-                tasks: ['coffee:test']
-            },
-            less: {
-                files: ['<%= yeoman.app %>/less/*.less'],
-                tasks: ['less']
-            },
-            css: {
-                files: ['.tmp/styles/{,*/}*.css'],
-                tasks: ['reload']
-            },
-            images: {
-                files: ['<%= yeoman.app %>/assets/images/**/*.{png,jpg,jpeg,webp}'],
-                tasks: ['images', 'reload']
-            }
-        },
-        open: {
-            server: {
-                url: 'http://localhost:9000'
-            }
+            less: ['client/less/*.less'] // recess:build doesn't accept ** in its file patterns
         },
         clean: {
             dist: {
@@ -169,12 +148,16 @@ module.exports = function (grunt) {
         },
         concat: {
             dist: {
+                options: {
+                    banner: '<%= banner %>'
+                },
                 files: {
-                    '<%= yeoman.dist %>/app/scripts.js': [
-                        '.tmp/app{,*/}*.js',
-                        '<%= yeoman.app %>/app/{,*/}*.js'
-                    ]
+                    '<%= yeoman.dist %>/app/scripts.js': '<%= yeoman.app %>/app/{,*/}*.js'
                 }
+            },
+            angular: {
+                src:['<%= yeoman.app %>/components/angular/angular.js'],
+                dest: '<%= yeoman.dist %>/angular.js'
             }
         },
         useminPrepare: {
@@ -305,6 +288,16 @@ module.exports = function (grunt) {
                     '.tmp/scripts/components/angular-sanitize/angular-sanitize.js': '<%= yeoman.app %>/components/angular-sanitize/angular-sanitize.js'
                 }
             },
+            assets: {
+                files: [
+                    {
+                        dest: '<%= yeoman.dist %>',
+                        src : '{,*/}',
+                        expand: true,
+                        cwd: 'client/assets/'
+                    }
+                ]
+            },
             app: {
                 files: [
                     {
@@ -391,7 +384,46 @@ module.exports = function (grunt) {
                     ignoredFiles: nodemonIgnoredFiles
                 }
             }
+        },
+        reload: {
+            port: 6001,
+            proxy: {
+                host: 'localhost',
+                port: 9000 // should match server.port config
+            }
+        },
+        watch: {
+            jade: {
+                files: ['<%= yeoman.app %>/app/{,*/}*.jade'],
+                tasks: ['jade', 'reload']
+            },
+            coffee: {
+                files: ['<%= yeoman.app %>/app/{,*/}*.coffee'],
+                tasks: ['coffee:dist']
+            },
+            coffeeTest: {
+                files: ['test/unit/{,*/}*.coffee', 'test/e2e/{,*/}*.coffee'],
+                tasks: ['coffee:test']
+            },
+            less: {
+                files: ['<%= yeoman.app %>/less/*.less'],
+                tasks: ['less']
+            },
+            css: {
+                files: ['.tmp/styles/{,*/}*.css'],
+                tasks: ['reload']
+            },
+            images: {
+                files: ['<%= yeoman.app %>/assets/images/**/*.{png,jpg,jpeg,webp}'],
+                tasks: ['images', 'reload']
+            }
+        },
+        open: {
+            server: {
+                url: 'http://localhost:9000'
+            }
         }
+
     });
 
     grunt.renameTask('regarde', 'watch');
