@@ -1,4 +1,4 @@
-# [yamn](https://github.com/docgecko/yamn) [![Build Status](https://travis-ci.org/joshdmiller/ng-boilerplate.png?branch=master)](https://travis-ci.org/joshdmiller/ng-boilerplate)
+# [yamn](https://github.com/docgecko/yamn) [![Build Status](https://travis-ci.org/docgecko/yamn.png?branch=master)](https://travis-ci.org/docgecko/yamn)
 
 A kickstarter for [Yeoman](http://http://yeoman.io), [AngularJS](http://angularjs.org), MongoDB & [NodeJS](http://nodejs.org) based projects.
 
