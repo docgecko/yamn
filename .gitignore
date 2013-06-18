@@ -1,6 +1,8 @@
 node_modules
 dist
 .tmp
+.idea
 .sass-cache
 app/components
 .nodemonignore
+.DS_Store
