@@ -12,17 +12,18 @@ module.exports = function (grunt) {
 
     var nodemonIgnoredFiles = [
         'README.md',
-//        'Gruntfile.js',
+        'Gruntfile.js',
         '/.git/',
         '/node_modules/',
-//        '/client/',
-//        '/dist/',
-        '/test/'
-//        '/temp/',
-//        '/.tmp',
-//        '/.sass-cache',
-//        '*.txt',
-//        '*.jade'
+        '/client/',
+        '/dist/',
+        '/server',
+        '/test/',
+        '/temp/',
+        '/.tmp',
+        '/.sass-cache',
+        '*.txt',
+        '*.jade'
     ];
 
     try {
@@ -42,14 +43,14 @@ module.exports = function (grunt) {
         watch: {
             jade: {
                 files: ['<%= yeoman.app %>/app/{,*/}*.jade'],
-                tasks: ['jade','reload']
+                tasks: ['jade', 'reload']
             },
             coffee: {
                 files: ['<%= yeoman.app %>/app/{,*/}*.coffee'],
                 tasks: ['coffee:dist']
             },
             coffeeTest: {
-                files: ['test/unit/{,*/}*.coffee'],
+                files: ['test/unit/{,*/}*.coffee', 'test/e2e/{,*/}*.coffee'],
                 tasks: ['coffee:test']
             },
             less: {
@@ -62,7 +63,7 @@ module.exports = function (grunt) {
             },
             images: {
                 files: ['<%= yeoman.app %>/assets/images/**/*.{png,jpg,jpeg,webp}'],
-                tasks: ['images','reload']
+                tasks: ['images', 'reload']
             }
         },
         open: {
@@ -377,7 +378,7 @@ module.exports = function (grunt) {
                         'scss'
                     ],
                     // nodemon watches the current directory recursively by default
-                    watchedFolders: ['client', 'dist','.tmp'],
+                    watchedFolders: ['client', 'dist', '.tmp'],
                     debug: true,
                     delayTime: 1,
                     ignoredFiles: nodemonIgnoredFiles
