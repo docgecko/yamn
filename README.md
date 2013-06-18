@@ -53,15 +53,28 @@ yamn/
   |- server/
   |  |- api
   |  |  |- <route files>
-  |- test
+  |- test/
+  |  |- config/
+  |  |  |- <karma config files>
+  |  |- e2e/
+  |  |  |- <karma scenario test files>
   |  |- lib/
   |  |  |- <angular mocks & scenario>
-  |  |- spec/
-  |  |- runner.html
+  |  |- unit/
+  |  |  |- <angular unit test files>
+  |- .bowerrc
+  |- .editorconfig
+  |- .gitattributes
+  |- .gitignore
+  |- .jshintrc
+  |- .nodemonignore
+  |- .travis.yml
+  |- app.js
+  |- bower.json
   |- Gruntfile.js
-  |- module.prefix
-  |- module.suffix
+  |- LICENSE
   |- package.json
+  |- README.md
 ```
 
 
