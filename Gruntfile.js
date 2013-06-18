@@ -285,30 +285,33 @@ module.exports = function (grunt) {
                     '.tmp/scripts/components/angular/angular.js': '<%= yeoman.app %>/components/angular/angular.js',
                     '.tmp/scripts/components/angular-resource/angular-resource.js': '<%= yeoman.app %>/components/angular-resource/angular-resource.js',
                     '.tmp/scripts/components/angular-cookies/angular-cookies.js': '<%= yeoman.app %>/components/angular-cookies/angular-cookies.js',
-                    '.tmp/scripts/components/angular-sanitize/angular-sanitize.js': '<%= yeoman.app %>/components/angular-sanitize/angular-sanitize.js'
+                    '.tmp/scripts/components/angular-sanitize/angular-sanitize.js': '<%= yeoman.app %>/components/angular-sanitize/angular-sanitize.js',
+                    '.tmp/scripts/components/es5-shim/es5-shim.js': '<%= yeoman.app %>/components/es5-shim/es5-shim.js',
+                    '.tmp/scripts/components/json3/lib/json3.min.js': '<%= yeoman.app %>/components/json3/lib/json3.min.js',
+                    '.tmp/scripts/components/ui-router/angular-ui-router.min.js': '<%= yeoman.app %>/components/ui-router/release/angular-ui-router.min.js'
                 }
             },
-            assets: {
-                files: [
-                    {
-                        dest: '<%= yeoman.dist %>',
-                        src : '{,*/}',
-                        expand: true,
-                        cwd: 'client/assets/'
-                    }
-                ]
-            },
-            app: {
-                files: [
-                    {
-                        expand: true,
-                        dot: true,
-                        cwd: '<%= yeoman.app %>/app',
-                        dest: '.tmp/scripts/app',
-                        src: '{,*/}*.js'
-                    }
-                ]
-            },
+//            assets: {
+//                files: [
+//                    {
+//                        dest: '<%= yeoman.dist %>',
+//                        src: '{,*/}',
+//                        expand: true,
+//                        cwd: 'client/assets/'
+//                    }
+//                ]
+//            },
+//            app: {
+//                files: [
+//                    {
+//                        expand: true,
+//                        dot: true,
+//                        cwd: '<%= yeoman.app %>/app',
+//                        dest: '.tmp/scripts/app',
+//                        src: '{,*/}*.js'
+//                    }
+//                ]
+//            },
             dist: {
                 files: [
                     {

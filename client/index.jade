@@ -51,30 +51,33 @@ html(class="no-js", ng-app="app")
 				a(href='http://www.google.com/chromeframe/?redirect=true') install Google Chrome Frame
 				| to better experience this site.
 			//if lt IE 9
-				script(src='components/es5-shim/es5-shim.js')
-				script(src='components/json3/lib/json3.min.js')
+				script(src='scripts/components/es5-shim/es5-shim.js')
+				script(src='scripts/components/json3/lib/json3.min.js')
 
 		block header
-			header.header(ng-include="getHeader()")
+			// header(ui-view='header')
+
+		block notification
+			// section(ui-view='notification')
 
 		block content
 			// Add your site or application content here
-			.container(ui-view)
+			section(ui-view)
 
 		block footer
-			footer.footer(ng-include="getFooter()")
+			// footer(ui-view='footer')
 
 		block angular
 			script(src='scripts/components/angular/angular.js')
 			script(src='scripts/components/angular-resource/angular-resource.js')
 			script(src='scripts/components/angular-cookies/angular-cookies.js')
 			script(src='scripts/components/angular-sanitize/angular-sanitize.js')
-			script(src='angular-ui-router.min.js')
+			script(src='scripts/components/ui-router/angular-ui-router.min.js')
 
 		block scripts
 			// build:js scripts/scripts.js
 			script(src='scripts/app/app.js')
-			script(src='scripts/app/welcome/welcome.js')
+			script(src='scripts/app/about/about.js')
 			// endbuild
 
 			// Google Analytics: change UA-XXXXX-X to be your site's ID.
