@@ -1,11 +1,14 @@
 'use strict';
 
-angular.module('welcome', [])
+angular.module('welcome', ['ui.state'])
 
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider
-            .when('/', {
-                templateUrl: 'app/welcome/index.html',
+    .config(['$stateProvider', '$routeProvider', function ($stateProvider, $routeProvider) {
+        $stateProvider
+            .state('index', {
+                url: "", // root route
+                views: {
+                    templateUrl: 'app/welcome/index.html'
+                },
                 controller: 'WelcomeCtrl'
             });
     }])

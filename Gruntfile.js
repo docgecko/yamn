@@ -385,6 +385,11 @@ module.exports = function (grunt) {
                 }
             }
         },
+        open: {
+            server: {
+                url: 'http://localhost:9000'
+            }
+        },
         reload: {
             port: 6001,
             proxy: {
@@ -395,7 +400,7 @@ module.exports = function (grunt) {
         watch: {
             jade: {
                 files: ['<%= yeoman.app %>/app/{,*/}*.jade'],
-                tasks: ['jade', 'reload']
+                tasks: ['jade']
             },
             coffee: {
                 files: ['<%= yeoman.app %>/app/{,*/}*.coffee'],
@@ -413,17 +418,11 @@ module.exports = function (grunt) {
                 files: ['.tmp/styles/{,*/}*.css'],
                 tasks: ['reload']
             },
-            images: {
-                files: ['<%= yeoman.app %>/assets/images/**/*.{png,jpg,jpeg,webp}'],
-                tasks: ['images', 'reload']
-            }
-        },
-        open: {
-            server: {
-                url: 'http://localhost:9000'
+            assets: {
+                files: ['<%= yeoman.app %>/assets/{,*/}*.*'],
+                tasks: ['images']
             }
         }
-
     });
 
     grunt.renameTask('regarde', 'watch');

@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('app', ['welcome'])
+angular.module('app', ['ui.state','welcome'])
 
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    .config(['$stateProvider', '$routeProvider', '$locationProvider', function ($stateProvider, $routeProvider, $locationProvider) {
         $routeProvider
             .otherwise({
                 redirectTo: '/'
