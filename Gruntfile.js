@@ -49,7 +49,7 @@ module.exports = function (grunt) {
                 tasks: ['coffee:dist']
             },
             coffeeTest: {
-                files: ['test/spec/{,*/}*.coffee'],
+                files: ['test/unit/{,*/}*.coffee'],
                 tasks: ['coffee:test']
             },
             less: {
@@ -97,7 +97,11 @@ module.exports = function (grunt) {
         },
         karma: {
             unit: {
-                configFile: 'karma.conf.js',
+                configFile: 'test/config/karma.conf.js',
+                singleRun: true
+            },
+            e2e: {
+                configFile: 'test/config/karma-e2e.conf.js',
                 singleRun: true
             }
         },
@@ -117,9 +121,9 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'test/spec',
+                        cwd: 'test/unit',
                         src: '{,*/}*.coffee',
-                        dest: '.tmp/spec',
+                        dest: '.tmp/unit',
                         ext: '.js'
                     }
                 ]

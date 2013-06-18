@@ -7,12 +7,12 @@ basePath = '';
 files = [
   JASMINE,
   JASMINE_ADAPTER,
-  'client/components/angular/angular.js',
-  'test/lib/angular-mocks/angular-mocks.js',
-  'client/app/*.js',
-  'client/app/**/*.js',
-  'test/mock/**/*.js',
-  'test/spec/**/*.js'
+  '../../client/components/angular/angular.js',
+  '../lib/angular-mocks/angular-mocks.js',
+  '../../client/app/*.js',
+  '../../client/app/**/*.js',
+  '../mock/**/*.js',
+  '../unit/**/*.js'
 ];
 
 // list of files to exclude
@@ -46,7 +46,7 @@ autoWatch = false;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['PhantomJS'];
+browsers = ['Chrome'];
 
 // If browser does not capture in given timeout [ms], kill it
 captureTimeout = 5000;
