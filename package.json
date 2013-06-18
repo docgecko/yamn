@@ -1,10 +1,10 @@
 {
-  "author": "Daren Warburton",
-  "name": "default",
+  "author": "Dr Daren Serra Dias Warburton",
+  "name": "yamn",
   "version": "0.1.0",
   "licences": {
     "type": "MIT",
-    "url": ""
+    "url": "https://raw.github.com/docgecko/yamn/master/LICENSE"
   },
   "dependencies": {
     "jade": "~0.31.1",
