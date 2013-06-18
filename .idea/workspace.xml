@@ -2,8 +2,322 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcbcb548-cac2-429f-9b4f-5e68da264a24" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.bowerrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/default.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/.buildignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/404.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/500.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/footer.tpl.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/header.tpl.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/welcome/index.tpl.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/welcome/welcome.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/welcome/welcome.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular-cookies/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular-cookies/angular-cookies.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular-cookies/angular-cookies.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular-cookies/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular-resource/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular-resource/angular-resource.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular-resource/angular-resource.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular-resource/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular-sanitize/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular-sanitize/angular-sanitize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular-sanitize/angular-sanitize.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular-sanitize/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular/angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/angular/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/css/foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/css/foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.alerts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.clearing.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.cookie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.forms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.joyride.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.magellan.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.orbit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.placeholder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.reveal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.section.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.tooltips.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/components-foundation/js/foundation/foundation.topbar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/CHANGES" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/CONTRIBUTORS.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/es5-sham.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/es5-sham.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/es5-sham.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/es5-shim.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/es5-shim.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/es5-shim.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/helpers/h-kill.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/helpers/h-matchers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/helpers/h.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/index.min.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/lib/jasmine-html.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/lib/jasmine.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/lib/jasmine.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/lib/jasmine_favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/lib/json2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/spec/s-array.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/spec/s-date.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/spec/s-function.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/spec/s-number.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/spec/s-object.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/es5-shim/tests/spec/s-string.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/jquery/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/jquery/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/jquery/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/jquery/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/jquery/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/jquery/jquery-migrate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/jquery/jquery-migrate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/jquery/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/jquery/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/jquery/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/.gitmodules" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/build.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/jsl.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/lib/json3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/lib/json3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/page/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/page/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/page/page.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/page/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/test/test_browser.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/test/test_json3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/vendor/closure-compiler.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/vendor/curl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/vendor/prototype.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/json3/vendor/require.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/a-download.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/audio-audiodata-api.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/audio-webaudio-api.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/battery-api.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/battery-level.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/blob-constructor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/canvas-todataurl-type.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/contenteditable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/contentsecuritypolicy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/contextmenu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/cookies.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/cors.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-backgroundposition-shorthand.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-backgroundposition-xy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-backgroundrepeat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-backgroundsizecover.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-boxsizing.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-calc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-cubicbezierrange.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-displayrunin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-displaytable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-filters.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-hyphens.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-lastchild.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-mask.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-mediaqueries.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-objectfit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-overflow-scrolling.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-pointerevents.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-positionsticky.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-regions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-remunit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-resize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-scrollbars.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-subpixelfont.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-supports.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-userselect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-vhunit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-vmaxunit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-vminunit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/css-vwunit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/custom-protocol-handler.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/dart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/dataview-api.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/dom-classlist.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/dom-createElement-attrs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/dom-dataset.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/dom-microdata.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/elem-datalist.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/elem-details.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/elem-output.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/elem-progress-meter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/elem-ruby.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/elem-time.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/elem-track.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/emoji.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/es5-strictmode.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/event-deviceorientation-motion.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/exif-orientation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/file-api.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/file-filesystem.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/forms-fileinput.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/forms-formattribute.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/forms-inputnumber-l10n.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/forms-placeholder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/forms-speechinput.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/forms-validation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/fullscreen-api.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/gamepad.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/getusermedia.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/ie8compat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/iframe-sandbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/iframe-seamless.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/iframe-srcdoc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/img-apng.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/img-webp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/json.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/lists-reversed.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/mathml.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/network-connection.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/network-eventsource.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/network-xhr2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/notification.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/performance.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/pointerlock-api.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/quota-management-api.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/requestanimationframe.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/script-async.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/script-defer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/style-scoped.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/svg-filters.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/unicode.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/url-data-uri.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/userdata.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/vibration.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/web-intents.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/webgl-extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/websockets-binary.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/window-framed.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/workers-blobworkers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/workers-dataworkers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/feature-detects/workers-sharedworkers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/grunt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/media/Modernizr 2 Logo.ai" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/media/Modernizr 2 Logo.eps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/media/Modernizr 2 Logo.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/media/Modernizr 2 Logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/media/Modernizr 2 Logo.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/modernizr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/Windsong-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/Windsong-webfont.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/Windsong-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/Windsong-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/Windsong-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/apng_test.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/before-after.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/form_validation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/ga.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/green5x5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/hashchange.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/mathml.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/mathml_ref.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/modernizr-1.7.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/png_alpha_result.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/pushstate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/red30x30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/ruby.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/stroked-text.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/svg-html-blur.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/svg-img.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/svg-img.svg.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/svg_blur.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/table.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/text-shadow1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/text-shadow2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/windsong_font.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/caniuse_files/xhtml.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/js/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/js/dumpdata.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/js/lib/detect-global.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/js/lib/jquery-1.7b2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/js/lib/jsonselect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/js/lib/polyfills.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/js/lib/uaparser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/js/setup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/js/unit-caniuse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/js/unit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/qunit/qunit.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/qunit/qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/modernizr/test/qunit/run-qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/normalize-css/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/normalize-css/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/normalize-css/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/normalize-css/normalize.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/humans.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/index.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/less/_colors.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/less/_layout.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/less/_looks.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/less/_mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/less/_typography.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/less/application.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/PROCESS.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/karma-e2e.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/api/welcome.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/lib/angular-mocks/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/lib/angular-mocks/angular-mocks.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/lib/angular-mocks/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/lib/angular-scenario/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/lib/angular-scenario/angular-scenario.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/lib/angular-scenario/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/lib/angular-scenario/jstd-scenario-adapter-config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/lib/angular-scenario/jstd-scenario-adapter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/runner.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/spec/controllers/main.js" afterPath="" />
     </list>
     <ignored path="default.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,6 +371,7 @@
     <file path="$PROJECT_DIR$/dist/components/modernizr/test/qunit/qunit.css" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371488674307" ignored="false" />
     <file path="/LICENSE" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371543912929" ignored="false" />
     <file path="/.gitignore" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371545402087" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371545504390" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +403,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="5" selection-start="33" selection-end="33" vertical-scroll-proportion="0.08219178">
+            <state line="4" column="14" selection-start="42" selection-end="42" vertical-scroll-proportion="0.08219178">
               <folding />
             </state>
           </provider>
@@ -576,7 +891,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="5" selection-start="33" selection-end="33" vertical-scroll-proportion="0.08219178">
+        <state line="4" column="14" selection-start="42" selection-end="42" vertical-scroll-proportion="0.08219178">
           <folding />
         </state>
       </provider>
