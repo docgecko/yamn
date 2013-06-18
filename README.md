@@ -18,9 +18,9 @@ $ grunt server
 ```
 
 Visit [http://localhost:9000](http://localhost:9000) to view home page.
-Also, open [http://localhost:6001](http://localhost:6001) to see reload of updated less & jade files - this page will only show updates as the less or jade files are updated.
 
-Happy hacking!
+Also, open [http://localhost:6001](http://localhost:6001) to see reload of updated less & jade files.  Once you update a LESS or JADE file, refresh this page once for the first time and, afterwards, it will update automatically.
+
 
 ## Purpose
 
