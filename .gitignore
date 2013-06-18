@@ -2,7 +2,7 @@ node_modules
 dist
 .tmp
 docs
-.ideagit add .
+.idea/*
 .sass-cache
 app/components
 .nodemonignore
