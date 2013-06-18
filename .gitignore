@@ -1,6 +1,7 @@
 node_modules
 dist
 .tmp
+docs
 .idea
 .sass-cache
 app/components
