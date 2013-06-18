@@ -45,9 +45,6 @@ yamn/
   |  |- less/
   |  |  |- main.less
   |- dist/
-  |  |- angular-bootstrap/
-  |  |- bootstrap/
-  |  |- placeholders/
   |- docs/
   |- node_modules/
   |- server/
