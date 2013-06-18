@@ -1,6 +1,6 @@
 # [yamn](https://github.com/docgecko/yamn) [![Build Status](https://travis-ci.org/docgecko/yamn.png?branch=master)](https://travis-ci.org/docgecko/yamn)
 
-A kickstarter for [Yeoman](http://http://yeoman.io), [AngularJS](http://angularjs.org), MongoDB & [NodeJS](http://nodejs.org) based projects.
+A boilerplace and kickstart for [Yeoman](http://yeoman.io), [AngularJS](http://angularjs.org), MongoDB & [NodeJS](http://nodejs.org) based projects.
 
 ***
 
@@ -16,6 +16,8 @@ $ npm install --save
 $ bower install --save-dev
 $ grunt server
 ```
+
+Visit [http://localhost:9000](http://localhost:9000) to view home page and open [http://localhost:6001](http://localhost:6001) to see reload of updated less & jade files.
 
 Happy hacking!
 
