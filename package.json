@@ -1,6 +1,11 @@
 {
+  "author": "Daren Warburton",
   "name": "default",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "licences": {
+    "type": "MIT",
+    "url": ""
+  },
   "dependencies": {
     "jade": "~0.31.1",
     "express": "~3.2.6",

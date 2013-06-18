@@ -54,9 +54,15 @@ html(class="no-js", ng-app="app")
 				script(src='components/es5-shim/es5-shim.js')
 				script(src='components/json3/lib/json3.min.js')
 
+		block header
+			header.header(ng-include="getHeader()")
+
 		block content
 			// Add your site or application content here
-			.section-container(ng-view)
+			.container(ng-view)
+
+		block footer
+			footer.footer(ng-include="getFooter()")
 
 		block angular
 			script(src='scripts/components/angular/angular.js')

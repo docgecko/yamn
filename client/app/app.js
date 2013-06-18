@@ -11,5 +11,10 @@ angular.module('app', ['welcome'])
     }])
 
     .controller('AppCtrl', ['$scope', function ($scope) {
-        console.log($scope);
+        $scope.getHeader = function () {
+            return 'app/header.html';
+        };
+        $scope.getFooter = function () {
+            return 'app/footer.html';
+        };
     }]);

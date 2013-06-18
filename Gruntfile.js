@@ -42,7 +42,7 @@ module.exports = function (grunt) {
         watch: {
             jade: {
                 files: ['<%= yeoman.app %>/app/{,*/}*.jade'],
-                tasks: ['jade']
+                tasks: ['jade','reload']
             },
             coffee: {
                 files: ['<%= yeoman.app %>/app/{,*/}*.coffee'],
@@ -128,7 +128,7 @@ module.exports = function (grunt) {
         jade: {
             dist: {
                 options: {
-                    paths: ['<%= yeoman.app %>/app/less'],
+                    paths: ['<%= yeoman.app %>/app'],
                     pretty: true
                 },
                 files: [
@@ -136,7 +136,10 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: '<%= yeoman.app %>',
                         dest: '.tmp/',
-                        src: 'app/{,*/}*.jade',
+                        src: [
+                            'app/{,*/}*.jade',
+                            'common/{,*/}*.jade'
+                        ],
                         ext: '.html'
                     }
                 ]

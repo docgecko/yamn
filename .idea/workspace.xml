@@ -5,18 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcbcb548-cac2-429f-9b4f-5e68da264a24" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/footer.tpl.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/header.tpl.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/welcome/welcome.less" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/less/welcome.less" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.js" afterPath="$PROJECT_DIR$/client/app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.jade" afterPath="$PROJECT_DIR$/client/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="default.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/.editorconfig" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370176215934" ignored="false" />
     <file path="/Gruntfile.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371483845484" ignored="false" />
-    <file path="/index.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371483892951" ignored="false" />
+    <file path="/index.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371489763063" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/angular-sanitize/angular-sanitize.min.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369758653875" ignored="false" />
     <file path="/index.html" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369821158344" ignored="false" />
     <file path="/layout.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371028151516" ignored="false" />
-    <file path="/app.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371055453822" ignored="false" />
+    <file path="/app.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371490097767" ignored="false" />
     <file path="/main.styl" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369826899321" ignored="false" />
     <file path="$PROJECT_DIR$/../../HotPie/views/stylesheets/sidewalk.styl" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369831669932" ignored="false" />
     <file path="/.bowerrc" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369835939464" ignored="false" />
@@ -24,8 +33,8 @@
     <file path="/humans.txt" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369847153577" ignored="false" />
     <file path="/styl.styl" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369922372092" ignored="false" />
     <file path="/index.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370179734896" ignored="false" />
-    <file path="/Dummy.txt" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371484099678" ignored="false" />
-    <file path="/package.json" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1369994495599" ignored="false" />
+    <file path="/Dummy.txt" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371484186235" ignored="false" />
+    <file path="/package.json" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371542939182" ignored="false" />
     <file path="/README.md" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370952085581" ignored="false" />
     <file path="$PROJECT_DIR$/../../my-project/views/index.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370009031203" ignored="false" />
     <file path="$PROJECT_DIR$/../default v3/app/index.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1370170351665" ignored="false" />
@@ -53,8 +62,12 @@
     <file path="$PROJECT_DIR$/src/app/components/modernizr/test/caniuse.html" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371466670854" ignored="false" />
     <file path="/welcome.less" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371468520173" ignored="false" />
     <file path="$PROJECT_DIR$/.tmp/scripts/app/welcome/welcome.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371483858245" ignored="false" />
-    <file path="$PROJECT_DIR$/.tmp/app/welcome/index.html" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371483858245" ignored="false" />
     <file path="$PROJECT_DIR$/.tmp/scripts/app/app.js" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371483858245" ignored="false" />
+    <file path="/header.tpl.jade" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371488754269" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/components/es5-shim/tests/lib/jasmine.css" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371488674307" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/components/components-foundation/css/foundation.css" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371488674307" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/components/modernizr/test/qunit/qunit.css" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371488674307" ignored="false" />
+    <file path="/LICENSE" changelist="fcbcb548-cac2-429f-9b4f-5e68da264a24" time="1371543010033" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,28 +87,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="37" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="49" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0">
+            <state line="64" column="43" selection-start="1857" selection-end="1857" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="40" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/welcome/welcome.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="34" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="12" selection-start="123" selection-end="123" vertical-scroll-proportion="0.1317716">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="25" selection-start="503" selection-end="503" vertical-scroll-proportion="0.39609483">
+            <state line="44" column="39" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.tpl.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/header.tpl.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="24" selection-start="30" selection-end="48" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -120,22 +160,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/client/app/home/home.js" />
-        <option value="$PROJECT_DIR$/client/404.jade" />
-        <option value="$PROJECT_DIR$/test/spec/controllers/main.js" />
-        <option value="$PROJECT_DIR$/dist/app/157a122c.scripts.js" />
-        <option value="$PROJECT_DIR$/client/app/app.js" />
-        <option value="$PROJECT_DIR$/.tmp/app/welcome/index.html" />
         <option value="$PROJECT_DIR$/client/src/app/welcome/welcome.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/less/welcome.less" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/karma.conf.js" />
         <option value="$PROJECT_DIR$/.tmp/scripts/app/welcome/welcome.js" />
         <option value="$PROJECT_DIR$/client/app/welcome/index.tpl.jade" />
-        <option value="$PROJECT_DIR$/client/app/welcome/welcome.js" />
-        <option value="$PROJECT_DIR$/client/index.jade" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/client/common/header.tpl.jade" />
+        <option value="$PROJECT_DIR$/client/common/footer.tpl.jade" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/client/app/header.tpl.jade" />
+        <option value="$PROJECT_DIR$/client/index.jade" />
+        <option value="$PROJECT_DIR$/client/app/welcome/welcome.js" />
+        <option value="$PROJECT_DIR$/client/app/app.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/LICENSE" />
       </list>
     </option>
   </component>
@@ -188,6 +228,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yamn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yamn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yamn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yamn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="less" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yamn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yamn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -212,11 +302,11 @@
       <recent name="$PROJECT_DIR$/app/styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/app/welcome" />
+      <recent name="$PROJECT_DIR$/client/app" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/client/src" />
-      <recent name="$PROJECT_DIR$/client/scripts/home" />
-      <recent name="$PROJECT_DIR$/client" />
     </key>
   </component>
   <component name="RunManager">
@@ -272,7 +362,11 @@
       <created>1371484110062</created>
       <updated>1371484110062</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Client directory .tmp working">
+      <created>1371484192277</created>
+      <updated>1371484192277</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -381,64 +475,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="20" selection-start="268" selection-end="268" vertical-scroll-proportion="0.08898305">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="9" selection-start="309" selection-end="309" vertical-scroll-proportion="0.23226704">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/styles/normalize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/styles/foundation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/less/welcome.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="233" selection-end="233" vertical-scroll-proportion="-9.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/modernizr/modernizr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.92672414">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/app/welcome/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/welcome/welcome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="32" selection-start="45" selection-end="45" vertical-scroll-proportion="0.06346968">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/welcome/index.tpl.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="15" selection-start="48" selection-end="48" vertical-scroll-proportion="0.06147541">
@@ -446,51 +482,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/scripts/app/app.js">
+    <entry file="file://$PROJECT_DIR$/server/api/welcome.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/scripts/app/welcome/welcome.js">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="35" selection-start="152" selection-end="152" vertical-scroll-proportion="0.12295082">
+        <state line="12" column="13" selection-start="219" selection-end="219" vertical-scroll-proportion="0.24657534">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/styles/welcome.css">
+    <entry file="file://$PROJECT_DIR$/client/app/footer.tpl.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="2" column="27" selection-start="51" selection-end="51" vertical-scroll-proportion="-0.5882353">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/styles/application.css">
+    <entry file="file://$PROJECT_DIR$/client/app/header.tpl.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="2" column="24" selection-start="30" selection-end="48" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="37" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0">
+        <state line="26" column="37" selection-start="768" selection-end="768" vertical-scroll-proportion="0.5619597">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="49" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0">
+        <state line="64" column="43" selection-start="1857" selection-end="1857" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/welcome/welcome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="34" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="40" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="25" selection-start="503" selection-end="503" vertical-scroll-proportion="0.39609483">
+        <state line="44" column="39" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="12" selection-start="123" selection-end="123" vertical-scroll-proportion="0.1317716">
           <folding />
         </state>
       </provider>
