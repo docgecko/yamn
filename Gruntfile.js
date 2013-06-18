@@ -46,7 +46,7 @@ module.exports = function (grunt) {
             html: ['client/index.html'],
             tpl: {
                 app: ['client/app/{,*/}*.tpl.html'],
-                common: ['client/app/common/{,*/}*.tpl.html']
+                common: ['client/common/{,*/}*.tpl.html']
             },
             less: ['client/less/*.less'] // recess:build doesn't accept ** in its file patterns
         },
@@ -291,27 +291,27 @@ module.exports = function (grunt) {
                     '.tmp/scripts/components/ui-router/angular-ui-router.min.js': '<%= yeoman.app %>/components/ui-router/release/angular-ui-router.min.js'
                 }
             },
-//            assets: {
-//                files: [
-//                    {
-//                        dest: '<%= yeoman.dist %>',
-//                        src: '{,*/}',
-//                        expand: true,
-//                        cwd: 'client/assets/'
-//                    }
-//                ]
-//            },
-//            app: {
-//                files: [
-//                    {
-//                        expand: true,
-//                        dot: true,
-//                        cwd: '<%= yeoman.app %>/app',
-//                        dest: '.tmp/scripts/app',
-//                        src: '{,*/}*.js'
-//                    }
-//                ]
-//            },
+            assets: {
+                files: [
+                    {
+                        dest: '<%= yeoman.dist %>',
+                        src: '{,*/}',
+                        expand: true,
+                        cwd: 'client/assets/'
+                    }
+                ]
+            },
+            app: {
+                files: [
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: '<%= yeoman.app %>/app',
+                        dest: '.tmp/scripts/app',
+                        src: '{,*/}*.js'
+                    }
+                ]
+            },
             dist: {
                 files: [
                     {
@@ -413,6 +413,10 @@ module.exports = function (grunt) {
                 files: ['test/unit/{,*/}*.coffee', 'test/e2e/{,*/}*.coffee'],
                 tasks: ['coffee:test']
             },
+            javascript: {
+                files: ['<%= yeoman.app %>/app/{,*/}*.js'],
+                tasks: ['javascript']
+            },
             less: {
                 files: ['<%= yeoman.app %>/less/*.less'],
                 tasks: ['less']
@@ -424,6 +428,10 @@ module.exports = function (grunt) {
             assets: {
                 files: ['<%= yeoman.app %>/assets/{,*/}*.*'],
                 tasks: ['images']
+            },
+            copy: {
+                files: ['<%= yeoman.app %>/app/{,*/}*.js'],
+                tasks: ['copy:app']
             }
         }
     });

@@ -3,7 +3,8 @@
  */
 
 var express = require('express')
-  , welcome = require('./server/api/welcome')
+  , home = require('./server/api/home')
+  , about = require('./server/api/about')
   , http = require('http')
   , path = require('path')
   , app = express()
@@ -67,7 +68,8 @@ app.use(function(error, req, res, next) {
 });
 
 // RESTful routes
-app.get('/', welcome.index);
+app.get('/', home.index);
+app.get('/about', about.index);
 
 // server
 server.listen(app.get('port'), function(){

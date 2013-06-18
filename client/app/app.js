@@ -8,8 +8,18 @@ angular.module('app', ['ui.compat', 'about'])
             var home = {
                 name: 'home',
                 url: '/',
-                template: 'app/home/index.html',
-                controller: 'AppCtrl'
+                views: {
+                    'header': {
+                        templateUrl: 'app/header.html'
+                    },
+                    'content': {
+                        templateUrl: 'app/index.html',
+                        controller: 'AppCtrl'
+                    },
+                    'footer': {
+                        templateUrl: 'app/footer.html'
+                    }
+                }
             };
 
             $stateProvider

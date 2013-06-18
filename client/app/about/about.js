@@ -5,16 +5,25 @@ angular.module('about', ['ui.compat'])
     .config(['$stateProvider', '$routeProvider', '$urlRouterProvider', '$locationProvider',
         function ($stateProvider, $routeProvider, $urlRouterProvider, $locationProvider) {
 
-            var home = {
+            var about = {
                 name: 'about',
                 url: '/about',
-                abstract: true,
-                template: 'app/about/index.html',
-                controller: 'AboutCtrl'
+                views: {
+                    'header': {
+                        templateUrl: 'app/header.html'
+                    },
+                    'content': {
+                        templateUrl: 'app/about/index.html',
+                        controller: 'AboutCtrl'
+                    },
+                    'footer': {
+                        templateUrl: 'app/footer.html'
+                    }
+                }
             };
 
             $stateProvider
-                .state(home);
+                .state(about);
 
             $locationProvider.html5Mode(true);
         }
