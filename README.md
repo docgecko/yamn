@@ -1,6 +1,11 @@
-# Yeoman, AngularJS, ExpressJS (NodeJS)
+# Yeoman, AngularJS, MongoDB & NodeJS
 
-The following is the process used to create this base ExpressJS & AngularJS app.
+The following is the process used to create a base ExpressJS & AngularJS, including the use of:
+
+- Yeoman, Bower & Grunt
+- Karma
+- Mongoid & Redis
+- and more ...
 
 
 ## Part 1: Yeoman, AngularJS, ExpressJS & Karma
