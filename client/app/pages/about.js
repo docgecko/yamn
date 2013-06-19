@@ -13,7 +13,7 @@ angular.module('about', ['ui.compat'])
                         templateUrl: 'app/header.html'
                     },
                     'content': {
-                        templateUrl: 'app/about/index.html',
+                        templateUrl: 'app/pages/about.html',
                         controller: 'AboutCtrl'
                     },
                     'footer': {

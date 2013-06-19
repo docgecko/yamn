@@ -28,7 +28,7 @@ html(class="no-js", ng-app="app")
 			link(rel='stylesheet', href='styles/normalize.css')
 			link(rel='stylesheet', href='styles/foundation.css')
 			link(rel='stylesheet', href='styles/application.css')
-			link(rel='stylesheet', href='styles/welcome.css')
+			link(rel='stylesheet', href='styles/about.css')
 			// endbuild
 
 		block socket.io
@@ -72,12 +72,12 @@ html(class="no-js", ng-app="app")
 			script(src='scripts/components/angular-resource/angular-resource.js')
 			script(src='scripts/components/angular-cookies/angular-cookies.js')
 			script(src='scripts/components/angular-sanitize/angular-sanitize.js')
-			script(src='scripts/components/ui-router/angular-ui-router.min.js')
+			script(src='scripts/components/ui-router/angular-ui-router.js')
 
 		block scripts
 			// build:js scripts/scripts.js
 			script(src='scripts/app/app.js')
-			script(src='scripts/app/about/about.js')
+			script(src='scripts/app/pages/about.js')
 			// endbuild
 
 			// Google Analytics: change UA-XXXXX-X to be your site's ID.

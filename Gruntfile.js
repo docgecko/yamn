@@ -288,7 +288,7 @@ module.exports = function (grunt) {
                     '.tmp/scripts/components/angular-sanitize/angular-sanitize.js': '<%= yeoman.app %>/components/angular-sanitize/angular-sanitize.js',
                     '.tmp/scripts/components/es5-shim/es5-shim.js': '<%= yeoman.app %>/components/es5-shim/es5-shim.js',
                     '.tmp/scripts/components/json3/lib/json3.min.js': '<%= yeoman.app %>/components/json3/lib/json3.min.js',
-                    '.tmp/scripts/components/ui-router/angular-ui-router.min.js': '<%= yeoman.app %>/components/ui-router/release/angular-ui-router.min.js'
+                    '.tmp/scripts/components/ui-router/angular-ui-router.js': '<%= yeoman.app %>/components/ui-router/release/angular-ui-router.js'
                 }
             },
             assets: {

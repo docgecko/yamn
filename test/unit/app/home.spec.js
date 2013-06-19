@@ -5,7 +5,7 @@ describe('Controller: AppCtrl', function () {
     // load the controller's module
     beforeEach(module('app'));
 
-    var WelcomeCtrl,
+    var AppCtrl,
         scope;
 
     // Initialize the controller and a mock scope
