@@ -3,8 +3,6 @@
  */
 
 var express = require('express')
-  , home = require('./server/api/home')
-  , about = require('./server/api/about')
   , http = require('http')
   , path = require('path')
   , app = express()
@@ -15,6 +13,11 @@ var express = require('express')
   , db = mongoose.createConnection('localhost', 'myapp')
   , colors = require('colors');
 
+// route vars
+var home = require('./server/api/home'),
+    pages = require('./server/api/pages');
+
+// csrf token
 var csrfValue = function (req) {
     var token = (req.body && req.body._csrf)
         || (req.query && req.query._csrf)
@@ -69,7 +72,7 @@ app.use(function(error, req, res, next) {
 
 // RESTful routes
 app.get('/', home.index);
-app.get('/about', about.index);
+app.get('/about', pages.about);
 
 // server
 server.listen(app.get('port'), function(){
