@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('about', ['ui.compat'])
+angular.module('about', ['app', 'ui.compat'])
 
     .config(['$stateProvider', '$routeProvider', '$urlRouterProvider', '$locationProvider',
         function ($stateProvider, $routeProvider, $urlRouterProvider, $locationProvider) {

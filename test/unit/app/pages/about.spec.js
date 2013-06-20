@@ -3,7 +3,7 @@
 describe('Controller: AboutCtrl', function () {
 
     // load the controller's module
-    beforeEach(module('app'));
+    beforeEach(module('about', 'app'));
 
     var AboutCtrl,
         scope;
@@ -16,7 +16,8 @@ describe('Controller: AboutCtrl', function () {
         });
     }));
 
-    it('should see reference to about is page', function () {
-
+    it('should see reference to about us page', function () {
+        var content = "About Us page";
+        expect(content).toBe("About Us page");
     });
 });
