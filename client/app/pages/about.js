@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('about', ['app', 'ui.compat'])
+angular.module('about', ['ui.compat'])
 
     .config(['$stateProvider', '$routeProvider', '$urlRouterProvider', '$locationProvider',
         function ($stateProvider, $routeProvider, $urlRouterProvider, $locationProvider) {
@@ -13,7 +13,7 @@ angular.module('about', ['app', 'ui.compat'])
                         templateUrl: 'app/header.html'
                     },
                     'content': {
-                        templateUrl: 'app/pages/about.html',
+                        templateUrl: 'app/pages/about.tpl.jade',
                         controller: 'AboutCtrl'
                     },
                     'footer': {
@@ -29,6 +29,7 @@ angular.module('about', ['app', 'ui.compat'])
         }
     ])
 
-    .controller('AboutCtrl', ['$scope', function () {
-        console.log('About loaded');
+    .controller('AboutCtrl', ['$scope', function ($scope) {
+        $scope.title = "About Us page";
+        console.log($scope.title);
     }]);

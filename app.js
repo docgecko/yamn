@@ -14,8 +14,8 @@ var express = require('express')
   , colors = require('colors');
 
 // route vars
-var home = require('./server/api/home')
-  , page = require('./server/api/page');
+var routes = require('./server/routes')
+  , pages = require('./server/routes/page');
 
 // csrf token
 var csrfValue = function (req) {
@@ -71,8 +71,8 @@ app.use(function(error, req, res, next) {
 });
 
 // RESTful routes
-app.get('/', home.index);
-app.get('/page/:static', page.view);
+app.get('/', routes.index);
+app.get('/page/about', pages.about);
 
 // server
 server.listen(app.get('port'), function(){
