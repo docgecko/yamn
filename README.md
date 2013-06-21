@@ -12,8 +12,8 @@ Install Node.js and then:
 $ git clone git://github.com/docgecko/yamn
 $ cd yamn
 $ npm install -g yo grunt-cli bower karma express
-$ npm install --save
-$ bower install --save-dev
+$ npm install --save-dev
+$ bower install --save
 $ grunt server
 ```
 
