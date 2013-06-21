@@ -13,7 +13,7 @@ angular.module('about', ['ui.compat'])
                         templateUrl: 'app/header.html'
                     },
                     'content': {
-                        templateUrl: 'app/pages/about.html',
+                        templateUrl: 'app/about/index.html',
                         controller: 'AboutCtrl'
                     },
                     'footer': {
@@ -29,7 +29,6 @@ angular.module('about', ['ui.compat'])
         }
     ])
 
-    .controller('AboutCtrl', ['$scope', function ($scope) {
-        $scope.title = 'About Us page';
-        console.log($scope.title);
+    .controller('AboutCtrl', ['$scope', function () {
+        console.log('About loaded');
     }]);
