@@ -4,7 +4,7 @@
  */
 
 exports.about = function(req, res){
-    res.render('app/pages/about', {
-        title: 'About Us page'
+    res.render('index', {
+        title: 'About Us Page'
     });
 };

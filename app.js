@@ -72,7 +72,7 @@ app.use(function(error, req, res, next) {
 
 // RESTful routes
 app.get('/', routes.index);
-app.get('/page/about', pages.about);
+app.get('/about', pages.about);
 
 // server
 server.listen(app.get('port'), function(){
