@@ -30,6 +30,6 @@ angular.module('about', ['ui.compat'])
     ])
 
     .controller('AboutCtrl', ['$scope', function ($scope) {
-        $scope.title = "About Us page";
+        $scope.title = 'About Us page';
         console.log($scope.title);
     }]);
