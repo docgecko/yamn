@@ -15,7 +15,7 @@ var express = require('express')
 
 // route vars
 var routes = require('./server/routes')
-  , pages = require('./server/routes/page');
+  , page = require('./server/routes/page');
 
 // csrf token
 var csrfValue = function (req) {
@@ -72,7 +72,7 @@ app.use(function(error, req, res, next) {
 
 // RESTful routes
 app.get('/', routes.index);
-app.get('/about', pages.about);
+app.get('/about', page.about);
 
 // server
 server.listen(app.get('port'), function(){
