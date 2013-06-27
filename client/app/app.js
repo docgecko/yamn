@@ -1,10 +1,6 @@
 'use strict';
 
-angular.module('app', [
-        'ui.compat',
-        'about',
-        'appServices'
-    ])
+angular.module('app', ['ui.compat', 'about', 'appServices'])
 
     .config(['$stateProvider', '$routeProvider', '$urlRouterProvider', '$locationProvider',
         function ($stateProvider, $routeProvider, $urlRouterProvider, $locationProvider) {
@@ -37,7 +33,7 @@ angular.module('app', [
         titleService.setSuffix(' | yamn');
     })
 
-    .controller('AppCtrl', ['$scope', function ($scope, titleService) {
+    .controller('AppCtrl', function ($scope, titleService) {
         $scope.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',
@@ -45,4 +41,4 @@ angular.module('app', [
         ];
 
         titleService.setTitle('Welcome');
-    }]);
+    });

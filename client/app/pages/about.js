@@ -3,7 +3,8 @@
 /* Pages - About module */
 
 angular.module('about', [
-        'ui.compat'
+        'ui.compat',
+        'appServices'
     ])
 
     .config(['$stateProvider', '$routeProvider', '$urlRouterProvider', '$locationProvider',
@@ -33,5 +34,6 @@ angular.module('about', [
         }
     ])
 
-    .controller('AboutCtrl', ['$scope', function () {
+    .controller('AboutCtrl', ['$scope', 'titleService', function ($scope, titleService) {
+        titleService.setTitle('About Us');
     }]);
