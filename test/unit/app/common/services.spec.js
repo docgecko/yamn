@@ -7,23 +7,22 @@ describe('Service: appServices', function () {
     // load the service's module
     beforeEach(module('appServices'));
 
-    var sSuffix,
-        gSuffix,
-        sTitle,
-        gTitle,
-        s = 'yamn',
-        t = 'Test Page';
+    var setSuffix,
+        getSuffix,
+        setTitle,
+        getTitle,
+        s,
+        t;
 
     // instantiate service
-    beforeEach(inject(function ($rootScope, sSuffix, gSuffix, sTitle, gTitle) {
-        scope = $rootScope.$new();
-        sSuffix = titleService.setSuffix(s);
-        gSuffix = titleService.getSuffix();
-        sTitle = titleService.setTitle(t);
-        gTitle = titleService.getTitle();
+    beforeEach(inject(function (titleService) {
+        setSuffix = titleService.setSuffix(' | yamn');
+        getSuffix = titleService.getSuffix();
+        setTitle = titleService.setTitle('Test Page');
+        getTitle = titleService.getTitle();
     }));
 
     it('should set the title', function () {
-        expect(gSuffix).toBe('Test Page | yamn');
+        expect(getTitle).toBe('Test Page | yamn');
     });
 });
