@@ -1,5 +1,7 @@
 'use strict';
 
+/* Application - App unit test */
+
 describe('Controller: AppCtrl', function () {
 
     // load the controller's module

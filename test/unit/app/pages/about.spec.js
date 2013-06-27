@@ -1,5 +1,7 @@
 'use strict';
 
+/* Pages - About unit test */
+
 describe('Controller: AboutCtrl', function () {
 
     // load the controller's module

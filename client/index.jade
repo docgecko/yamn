@@ -55,24 +55,25 @@ html(class="no-js", data-ng-app="app")
 				script(src='scripts/components/es5-shim/es5-shim.js')
 				script(src='scripts/components/json3/lib/json3.min.js')
 
+		block navigation
+			nav.top-bar(ng-include="'app/navigation.html'")
+
 		block header
-			header
-				div.row
-					section.large-12.columns(data-ui-view='header')
+			header.twelve.column(data-ui-view='header')
 
 		block notification
 			div.row
-				section.large-12.columns(data-ui-view='notification')
+				section.twelve.column(data-ui-view='notification')
 
 		block content
 			// Add your site or application content here
-			div.row
-				section.large-12.columns(data-ui-view='content')
-		      | Loading...
+			section.row
+				div.twelve.column(data-ui-view='content')
+					| Loading...
 
 		block footer
 			div.row
-				footer.large-12.columns(data-ui-view='footer')
+				footer.twelve.column(data-ui-view='footer')
 
 		block angular
 			script(src='scripts/components/angular/angular.js')
