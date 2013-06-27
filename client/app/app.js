@@ -1,6 +1,12 @@
 'use strict';
 
-angular.module('app', ['ui.compat', 'about', 'appServices'])
+/* Application - app module */
+
+angular.module('app', [
+        'ui.compat',
+        'about',
+        'appServices'
+    ])
 
     .config(['$stateProvider', '$routeProvider', '$urlRouterProvider', '$locationProvider',
         function ($stateProvider, $routeProvider, $urlRouterProvider, $locationProvider) {
@@ -40,5 +46,6 @@ angular.module('app', ['ui.compat', 'about', 'appServices'])
             'Karma'
         ];
 
-        titleService.setTitle('Welcome');
+        var pageTitle = 'Welcome'
+        titleService.setTitle(pageTitle);
     });
