@@ -1,6 +1,10 @@
 'use strict';
 
-angular.module('about', ['ui.compat'])
+/* Pages - About module */
+
+angular.module('about', [
+        'ui.compat'
+    ])
 
     .config(['$stateProvider', '$routeProvider', '$urlRouterProvider', '$locationProvider',
         function ($stateProvider, $routeProvider, $urlRouterProvider, $locationProvider) {

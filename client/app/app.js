@@ -1,6 +1,10 @@
 'use strict';
 
-angular.module('app', ['ui.compat', 'about'])
+angular.module('app', [
+        'ui.compat',
+        'about',
+        'appServices'
+    ])
 
     .config(['$stateProvider', '$routeProvider', '$urlRouterProvider', '$locationProvider',
         function ($stateProvider, $routeProvider, $urlRouterProvider, $locationProvider) {
@@ -29,10 +33,16 @@ angular.module('app', ['ui.compat', 'about'])
         }
     ])
 
-    .controller('AppCtrl', ['$scope', function ($scope) {
+    .run(function run (titleService) {
+        titleService.setSuffix(' | yamn');
+    })
+
+    .controller('AppCtrl', ['$scope', function ($scope, titleService) {
         $scope.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',
             'Karma'
         ];
+
+        titleService.setTitle('Welcome');
     }]);

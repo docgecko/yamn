@@ -1,12 +1,12 @@
 doctype 5
 //if lt IE 7
-	html(class="no-js lt-ie9 lt-ie8 lt-ie7", ng-app="app")
+	html(class="no-js lt-ie9 lt-ie8 lt-ie7", data-ng-app="app")
 //if IE 7
-	html(class="no-js lt-ie9 lt-ie8", ng-app="app")
+	html(class="no-js lt-ie9 lt-ie8", data-ng-app="app")
 //if IE 8
-	html(class="no-js lt-ie9", ng-app="app")
+	html(class="no-js lt-ie9", data-ng-app="app")
 // [if gt IE 8] <!
-html(class="no-js", ng-app="app")
+html(class="no-js", data-ng-app="app")
 	// <![endif]
 	head
 		block meta
@@ -41,7 +41,7 @@ html(class="no-js", ng-app="app")
 					socket.emit('my other event', { my: 'data' });
 				});
 
-	body(ng-controller="AppCtrl")
+	body(data-ng-controller="AppCtrl")
 		block iesupport
 			//if lt IE 7
 				p.chromeframe
@@ -55,17 +55,17 @@ html(class="no-js", ng-app="app")
 				script(src='scripts/components/json3/lib/json3.min.js')
 
 		block header
-			header(ui-view='header')
+			header(data-ui-view='header')
 
 		block notification
-			section(ui-view='notification')
+			section(data-ui-view='notification')
 
 		block content
 			// Add your site or application content here
-			section(ui-view='content')
+			section(data-ui-view='content')
 
 		block footer
-			footer(ui-view='footer')
+			footer(data-ui-view='footer')
 
 		block angular
 			script(src='scripts/components/angular/angular.js')
@@ -78,6 +78,7 @@ html(class="no-js", ng-app="app")
 			// build:js scripts/scripts.js
 			script(src='scripts/app/app.js')
 			script(src='scripts/app/pages/about.js')
+			script(src='scripts/app/users/user.js')
 			// endbuild
 
 			// Google Analytics: change UA-XXXXX-X to be your site's ID.
