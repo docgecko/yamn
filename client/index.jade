@@ -29,6 +29,7 @@ html(class="no-js", data-ng-app="app")
 			link(rel='stylesheet', href='styles/foundation.css')
 			link(rel='stylesheet', href='styles/application.css')
 			link(rel='stylesheet', href='styles/about.css')
+			link(rel='stylesheet', href='styles/user.css')
 			// endbuild
 
 		block socket.io
@@ -55,17 +56,23 @@ html(class="no-js", data-ng-app="app")
 				script(src='scripts/components/json3/lib/json3.min.js')
 
 		block header
-			header(data-ui-view='header')
+			header
+				div.row
+					section.large-12.columns(data-ui-view='header')
 
 		block notification
-			section(data-ui-view='notification')
+			div.row
+				section.large-12.columns(data-ui-view='notification')
 
 		block content
 			// Add your site or application content here
-			section(data-ui-view='content')
+			div.row
+				section.large-12.columns(data-ui-view='content')
+		      | Loading...
 
 		block footer
-			footer(data-ui-view='footer')
+			div.row
+				footer.large-12.columns(data-ui-view='footer')
 
 		block angular
 			script(src='scripts/components/angular/angular.js')

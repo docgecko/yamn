@@ -35,6 +35,6 @@ angular.module('about', [
     ])
 
     .controller('AboutCtrl', ['$scope', 'titleService', function ($scope, titleService) {
-        var pageTitle = 'About Us'
+        var pageTitle = 'About Us';
         titleService.setTitle(pageTitle);
     }]);

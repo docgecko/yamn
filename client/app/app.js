@@ -35,17 +35,17 @@ angular.module('app', [
         }
     ])
 
-    .run(function run (titleService) {
+    .run(['titleService', function (titleService) {
         titleService.setSuffix(' | yamn');
-    })
+    }])
 
-    .controller('AppCtrl', function ($scope, titleService) {
+    .controller('AppCtrl', ['$scope', 'titleService', function ($scope, titleService) {
         $scope.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',
             'Karma'
         ];
 
-        var pageTitle = 'Welcome'
+        var pageTitle = 'Welcome';
         titleService.setTitle(pageTitle);
-    });
+    }]);

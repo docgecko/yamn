@@ -1,11 +1,11 @@
 'use strict';
 
-describe('Controller: AboutCtrl', function () {
+describe('Controller: AppCtrl', function () {
 
     // load the controller's module
-    beforeEach(module('app', 'about', 'appServices'));
+    beforeEach(module('app', 'appServices'));
 
-    var AboutCtrl,
+    var AppCtrl,
         scope,
         pageTitle,
         pageTitleSuffix;
@@ -13,15 +13,19 @@ describe('Controller: AboutCtrl', function () {
     // Initialize the controller and a mock scope
     beforeEach(inject(function ($controller, $rootScope, titleService) {
         scope = $rootScope.$new();
-        AboutCtrl = $controller('AboutCtrl', {
+        AppCtrl = $controller('AppCtrl', {
             $scope: scope
         });
         pageTitle = titleService.getTitle();
         pageTitleSuffix = titleService.getSuffix();
     }));
 
+    it('should attach a list of awesomeThings to the scope', function () {
+        expect(scope.awesomeThings.length).toBe(3);
+    });
+
     it('should have a page title', function () {
-        expect(pageTitle).toContain('About Us');
+        expect(pageTitle).toContain('Welcome');
         expect(pageTitleSuffix).toContain('yamn');
     });
 });
