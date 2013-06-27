@@ -1,6 +1,6 @@
 'use strict';
 
-/* Application - App unit test */
+/* Common - Services unit test */
 
 describe('Service: appServices', function () {
 

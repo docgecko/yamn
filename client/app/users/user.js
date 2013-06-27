@@ -3,5 +3,5 @@
 /* Users - User module */
 
 angular.module('user', [
-    'ui.compat',
-])
+    'ui.compat'
+]);
