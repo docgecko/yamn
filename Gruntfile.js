@@ -40,15 +40,15 @@ module.exports = function (grunt) {
             ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>;\n' +
             ' * Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %>\n */\n',
         src: {
-            js: ['client/app/{,*/}/*.js', '<%= yeoman.dist %>/app/{,*/}*.js'],
+            js: ['client/app/{,*/}*.js', '<%= yeoman.dist %>/app/{,*/}*.js'],
             specs: ['test/{,*/}*.spec.js'],
-            scenarios: ['test/{,*/}/*.scenario.js'],
+            scenarios: ['test/{,*/}*.scenario.js'],
             html: ['client/index.html'],
             tpl: {
                 app: ['client/app/{,*/}*.tpl.html'],
                 common: ['client/common/{,*/}*.tpl.html']
             },
-            less: ['client/less/*.less'] // recess:build doesn't accept ** in its file patterns
+            less: ['client/less/*.less','client/app/{,*/}*.less'] // recess:build doesn't accept ** in its file patterns
         },
         clean: {
             dist: {
@@ -118,12 +118,9 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= yeoman.app %>',
-                        dest: '.tmp/',
-                        src: [
-                            'app/{,*/}*.jade',
-                            'common/{,*/}*.jade'
-                        ],
+                        cwd: '<%= yeoman.app %>/app',
+                        dest: '.tmp/templates/',
+                        src: '{,*/}*.jade',
                         ext: '.html'
                     }
                 ]
@@ -131,19 +128,16 @@ module.exports = function (grunt) {
         },
         less: {
             dist: {
-                options: {
-                    yuicompress: false
-                },
-                files: [
-                    {
-                        // no need for files, the config below should work
-                        expand: true,
-                        cwd: '<%= yeoman.app %>/less',
-                        dest: '.tmp/styles/',
-                        src: '{,*/}*.less',
-                        ext: '.css'
-                    }
-                ]
+                files: {
+                    '.tmp/styles/_colors.css': '<%= yeoman.app %>/less/_colors.less',
+                    '.tmp/styles/_layout.css': '<%= yeoman.app %>/less/_layout.less',
+                    '.tmp/styles/_looks.css': '<%= yeoman.app %>/less/_looks.less',
+                    '.tmp/styles/_mixins.css': '<%= yeoman.app %>/less/_mixins.less',
+                    '.tmp/styles/_typography.css': '<%= yeoman.app %>/less/_typography.less',
+                    '.tmp/styles/application.css': '<%= yeoman.app %>/less/application.less',
+                    '.tmp/styles/about.css': '<%= yeoman.app %>/app/pages/about.less',
+                    '.tmp/styles/user.css': '<%= yeoman.app %>/app/users/user.less'
+                }
             }
         },
         concat: {
@@ -282,6 +276,7 @@ module.exports = function (grunt) {
             },
             scripts: {
                 files: {
+                    '.tmp/scripts/components/modernizr/modernizr.js': '<%= yeoman.app %>/components/modernizr/modernizr.js',
                     '.tmp/scripts/components/angular/angular.js': '<%= yeoman.app %>/components/angular/angular.js',
                     '.tmp/scripts/components/angular-resource/angular-resource.js': '<%= yeoman.app %>/components/angular-resource/angular-resource.js',
                     '.tmp/scripts/components/angular-cookies/angular-cookies.js': '<%= yeoman.app %>/components/angular-cookies/angular-cookies.js',
@@ -418,7 +413,7 @@ module.exports = function (grunt) {
                 tasks: ['javascript']
             },
             less: {
-                files: ['<%= yeoman.app %>/less/*.less'],
+                files: ['<%= yeoman.app %>/{,*/}{,*/}*.less'],
                 tasks: ['less']
             },
             css: {

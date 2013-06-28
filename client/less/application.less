@@ -1,0 +1,21 @@
+/**
+ * sticky footer for zurb's foundation 4+
+ */
+body {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -195px; /* the bottom margin is the negative value of the footer's height */
+}
+
+footer, .push {
+  height: 195px; /* .push must be the same height as .footer */
+}

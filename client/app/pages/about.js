@@ -15,14 +15,11 @@ angular.module('about', [
                 url: '/about',
                 views: {
                     'header': {
-                        templateUrl: 'app/header.html'
+                        templateUrl: 'templates/shared/header.html'
                     },
                     'content': {
-                        templateUrl: 'app/pages/about.html',
+                        templateUrl: 'templates/pages/about.html',
                         controller: 'AboutCtrl'
-                    },
-                    'footer': {
-                        templateUrl: 'app/footer.html'
                     }
                 }
             };

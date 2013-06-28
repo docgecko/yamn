@@ -5,6 +5,7 @@
 angular.module('app', [
         'ui.compat',
         'about',
+        'users',
         'appServices'
     ])
 
@@ -16,14 +17,11 @@ angular.module('app', [
                 url: '/',
                 views: {
                     'header': {
-                        templateUrl: 'app/header.html'
+                        templateUrl: 'templates/shared/header.html'
                     },
                     'content': {
-                        templateUrl: 'app/index.html',
+                        templateUrl: 'templates/index.html',
                         controller: 'AppCtrl'
-                    },
-                    'footer': {
-                        templateUrl: 'app/footer.html'
                     }
                 }
             };
