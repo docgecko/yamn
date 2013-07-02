@@ -27,7 +27,8 @@ html(class="no-js", data-ng-app="app")
 			// build:css styles/main.css
 			link(rel='stylesheet', href='styles/normalize.css')
 			link(rel='stylesheet', href='styles/foundation.css')
-			link(rel='stylesheet', href='styles/application.css')
+			link(rel='stylesheet', href='styles/app.css')
+			link(rel='stylesheet', href='styles/welcome.css')
 			link(rel='stylesheet', href='styles/about.css')
 			link(rel='stylesheet', href='styles/user.css')
 			// endbuild
@@ -86,6 +87,7 @@ block scripts
 	// build:js scripts/scripts.js
 	script(src='scripts/app/app.js')
 	script(src='scripts/app/common/services.js')
+	script(src='scripts/app/pages/welcome.js')
 	script(src='scripts/app/pages/about.js')
 	script(src='scripts/app/users/user.js')
 	// endbuild

@@ -14,8 +14,8 @@ var express = require('express')
   , colors = require('colors');
 
 // route vars
-var routes = require('./server/routes')
-  , page = require('./server/routes/page');
+var pages = require('./server/api/pages')
+  , users = require('./server/api/users');
 
 // csrf token
 var csrfValue = function (req) {
@@ -55,7 +55,7 @@ if ('development' == app.get('env')) {
     app.use(express.static(path.join(__dirname, 'dist')));
 }
 
-// development onlu
+// development only
 if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
@@ -70,9 +70,18 @@ app.use(function(error, req, res, next) {
     res.render('500.jade', {title: '500: Internal Server Error', status: 500, error: error});
 });
 
-// RESTful routes
-app.get('/', routes.index);
-app.get('/about', page.about);
+
+// api - pages
+app.get('/', pages.welcome);
+app.get('/about', pages.about);
+
+// api - users
+app.get('/users', users.index);
+//app.get('/api/users/:id', users.show);
+//app.post('/api/users', users.create);
+//app.put('/api/users/:id', users.update);
+//app.del('/api/users/:id', users.del);
+
 
 // server
 server.listen(app.get('port'), function(){

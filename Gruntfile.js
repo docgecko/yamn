@@ -134,7 +134,8 @@ module.exports = function (grunt) {
                     '.tmp/styles/_looks.css': '<%= yeoman.app %>/less/_looks.less',
                     '.tmp/styles/_mixins.css': '<%= yeoman.app %>/less/_mixins.less',
                     '.tmp/styles/_typography.css': '<%= yeoman.app %>/less/_typography.less',
-                    '.tmp/styles/application.css': '<%= yeoman.app %>/less/application.less',
+                    '.tmp/styles/app.css': '<%= yeoman.app %>/less/app.less',
+                    '.tmp/styles/welcome.css': '<%= yeoman.app %>/app/pages/welcome.less',
                     '.tmp/styles/about.css': '<%= yeoman.app %>/app/pages/about.less',
                     '.tmp/styles/user.css': '<%= yeoman.app %>/app/users/user.less'
                 }

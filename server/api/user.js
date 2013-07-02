@@ -1,7 +1,7 @@
 'use strict';
 
 /*
- * GET home page.
+ * GET user page.
  */
 
 exports.index = function(req, res){
