@@ -12,6 +12,11 @@ var express = require('express')
   , colors = require('colors');
 
 
+// api route vars
+var pages = require('./server/api/pages')
+  , users = require('./server/api/users');
+
+
 // mongdb connection
 var mongoose = require('mongoose');
 var db = mongoose.connection;
@@ -19,32 +24,14 @@ db.on('error', console.error.bind(console, 'connection error:'));
 if ('development' == app.get('env')) {
     mongoose.connect('mongodb://localhost/crm');
     db.once('open', function callback () {
-        console.log(
-            'Yay'.green +
-            ' - successfully connected to the ' +
-            'localhost crm'.green +
-            ' in ' +
-            'development'.grey +
-            ' mode'
-        );
+        console.log('Yay'.green + ' - successfully connected to the ' + 'localhost crm'.green + ' in ' + 'development'.grey + ' mode');
     });
 } else {
     mongoose.connect('mongodb://admin:Ma1andra@mongo.onmodulus.net:27017/Ubu2godo');
     db.once('open', function callback () {
-        console.log(
-            'Yay'.green +
-            ' - successfully connected to ' +
-            'Ubu2godo'.green+
-            ' mongodb store ' +
-            'Modulus'.grey
-        );
+        console.log('Yay'.green + ' - successfully connected to ' + 'Ubu2godo'.green + ' mongodb store ' + 'Modulus'.grey);
     });
 }
-
-
-// api route vars
-var pages = require('./server/api/pages')
-  , users = require('./server/api/users');
 
 
 // csrf token
