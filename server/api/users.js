@@ -1,24 +1,19 @@
-var fs = require('fs-extra')
-  , path = require('path')
-  , _ = require('underscore');
+// GET
+exports.index = function (req, res) {
+};
 
-module.exports.index = index;
-module.exports.create = create;
-module.exports.read = show;
-module.exports.update = update;
-module.exports.del = del;
+exports.show = function (req, res) {
+};
 
-function index (req, res) {
-}
 
-function create (req, res) {
-}
+// POST
+exports.create = function (req, res) {
+};
 
-function show (req, res) {
-}
+exports.update = function (req, res) {
+};
 
-function update (req, res) {
-}
 
-function del (req, res) {
-}
+// DELETE
+exports.delete = function (req, res) {
+};

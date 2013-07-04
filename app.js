@@ -8,14 +8,44 @@ var express = require('express')
   , app = express()
   , server = http.createServer(app)
   , io = require('socket.io').listen(server)
-  , mongoose = require('mongoose')
   , RedisStore = require('connect-redis')(express)
-  , db = mongoose.createConnection('localhost', 'myapp')
   , colors = require('colors');
 
-// route vars
+
+// mongdb connection
+var mongoose = require('mongoose');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+if ('development' == app.get('env')) {
+    mongoose.connect('mongodb://localhost/crm');
+    db.once('open', function callback () {
+        console.log(
+            'Yay'.green +
+            ' - successfully connected to the ' +
+            'localhost crm'.green +
+            ' in ' +
+            'development'.grey +
+            ' mode'
+        );
+    });
+} else {
+    mongoose.connect('mongodb://admin:Ma1andra@mongo.onmodulus.net:27017/Ubu2godo');
+    db.once('open', function callback () {
+        console.log(
+            'Yay'.green +
+            ' - successfully connected to ' +
+            'Ubu2godo'.green+
+            ' mongodb store ' +
+            'Modulus'.grey
+        );
+    });
+}
+
+
+// api route vars
 var pages = require('./server/api/pages')
   , users = require('./server/api/users');
+
 
 // csrf token
 var csrfValue = function (req) {
@@ -25,6 +55,7 @@ var csrfValue = function (req) {
         || (req.headers['x-xsrf-token']);
     return token;
 };
+
 
 // all environments
 app.set('port', process.env.PORT || 9000);
@@ -47,6 +78,7 @@ app.use(function (req, res, next) {
 });
 app.use(app.router);
 
+
 // host dev files if in dev mode
 if ('development' == app.get('env')) {
     app.use(express.static(path.join(__dirname, 'client')));
@@ -55,10 +87,12 @@ if ('development' == app.get('env')) {
     app.use(express.static(path.join(__dirname, 'dist')));
 }
 
+
 // development only
 if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
+
 
 // Handle 404
 app.use(function(req, res) {
@@ -71,22 +105,23 @@ app.use(function(error, req, res, next) {
 });
 
 
-// api - pages
+// routes - static pages
 app.get('/', pages.welcome);
 app.get('/about', pages.about);
 
 // api - users
 app.get('/users', users.index);
-//app.get('/api/users/:id', users.show);
-//app.post('/api/users', users.create);
-//app.put('/api/users/:id', users.update);
-//app.del('/api/users/:id', users.del);
+app.get('/user/:id', users.show);
+// app.post('/users/new', users.create);
+app.put('/users/:id/edit', users.update);
+app.delete('/user/:id', users.delete);
 
 
 // server
 server.listen(app.get('port'), function(){
     console.log("Express server listening in %s on port %d", colors.green(app.get('env')), app.get('port'));
 });
+
 
 // io cofiguration
 io.configure('production', function () {

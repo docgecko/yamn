@@ -19,7 +19,7 @@ angular.module('users', [
                     },
                     'content': {
                         templateUrl: 'templates/users/index.html',
-                        controller: 'UserCtrl'
+                        controller: 'UserListCtrl'
                     }
                 }
             };
@@ -31,7 +31,13 @@ angular.module('users', [
         }
     ])
 
-    .controller('UserCtrl', ['$scope', 'titleService', function ($scope, titleService) {
+    .controller('UserListCtrl', ['$scope', '$http', 'titleService', function ($scope, $http, titleService) {
+        $http.get('/api/users').
+            success(function(data, status, headers, config) {
+                if(data.success){
+                    $scope.users = data.users;
+                }
+            });
         var pageTitle = 'Users';
         titleService.setTitle(pageTitle);
     }]);
