@@ -1,11 +1,11 @@
 'use strict';
 
-/* Application - App unit test */
+/* Pages - Welcome unit test */
 
 describe('Controller: WelcomeCtrl', function () {
 
     // load the controller's module
-    beforeEach(module('app', 'about', 'appServices'));
+    beforeEach(module('app', 'welcome', 'appServices'));
 
     var WelcomeCtrl,
         scope,

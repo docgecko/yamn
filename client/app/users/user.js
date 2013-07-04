@@ -19,25 +19,39 @@ angular.module('users', [
                     },
                     'content': {
                         templateUrl: 'templates/users/index.html',
-                        controller: 'UserListCtrl'
+                        controller: 'UsersListCtrl'
+                    }
+                }
+            };
+
+            var usersEdit = {
+                name: 'users.edit',
+                url: '/users/:id/edit',
+                views: {
+                    'header': {
+                        templateUrl: 'templates/shared/header.html'
+                    },
+                    'content': {
+                        templateUrl: 'templates/users/edit.html',
+                        controller: 'UserEditCtrl'
                     }
                 }
             };
 
             $stateProvider
-                .state(users);
+                .state(users)
+                .state(usersEdit);
 
             $locationProvider.html5Mode(true);
         }
     ])
 
-    .controller('UserListCtrl', ['$scope', '$http', 'titleService', function ($scope, $http, titleService) {
-        $http.get('/api/users').
-            success(function(data, status, headers, config) {
-                if(data.success){
-                    $scope.users = data.users;
-                }
-            });
+    .controller('UsersListCtrl', ['$scope', '$http', 'titleService', function ($scope, $http, titleService) {
         var pageTitle = 'Users';
+        titleService.setTitle(pageTitle);
+    }])
+
+    .controller('UsersEditCtrl', ['$scope', '$http', 'titleService', function ($scope, $http, titleService) {
+        var pageTitle = 'Your user settings';
         titleService.setTitle(pageTitle);
     }]);
